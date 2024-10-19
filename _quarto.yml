@@ -5,7 +5,7 @@ website:
   title: "Special-Rcology"
   favicon: images/favicon.ico
   page-navigation: true
-  site-url: https://soekni.github.io/Special-Rcology/
+  site-url: https://soekni.quarto.pub/special-rcology/
   reader-mode: true
   repo-url: https://github.com/soekni/Special-Rcology
   repo-actions: [edit, source, issue]

@@ -10,37 +10,6 @@
     ]
   },
   {
-    "objectID": "Roadmap.html",
-    "href": "Roadmap.html",
-    "title": "Roadmap",
-    "section": "",
-    "text": "I’ll just put my initial ideas for further Rticles 😏 here:\n\nAdvanced Basics of \\(R\\) (Loops, Functions, Examples)\nBasic Statistics in \\(R\\) with examples (t-tests, linear models, examples)\nFurther statistics (GLM, GAM, NLS and when to use them)\nStatistical theory (MLE, sum of least squares, normal distribution, equations)\nBaysian Statistics in \\(R\\)\nLiterature recommendations/Further readings for each Rticle\n\nYou can add your ideas down below by commenting.",
-    "crumbs": [
-      "Roadmap"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "The Idea",
-    "section": "",
-    "text": "The aim of this site is simple:\nGather up useful information on R, Ecology and Statistics here.\nUse it as a “cheat sheet” or digital garden for basic knowledge.\nYou can help by participating or pointing out mistakes by commenting.",
-    "crumbs": [
-      "The Idea"
-    ]
-  },
-  {
-    "objectID": "R/Rste_Schritte.html",
-    "href": "R/Rste_Schritte.html",
-    "title": "Rste Schritte",
-    "section": "",
-    "text": "When first using \\(R\\), try this website (in german) or this resource in english.",
-    "crumbs": [
-      "R,R,R",
-      "Rste Schritte"
-    ]
-  },
-  {
     "objectID": "authoring.html",
     "href": "authoring.html",
     "title": "Authoring Content",
@@ -88,6 +57,37 @@
     "text": "Please leave a comment when you still need help after looking for the right commands etc.",
     "crumbs": [
       "Authoring Content"
+    ]
+  },
+  {
+    "objectID": "R/Rste_Schritte.html",
+    "href": "R/Rste_Schritte.html",
+    "title": "Rste Schritte",
+    "section": "",
+    "text": "When first using \\(R\\), try this website (in german) or this resource in english.",
+    "crumbs": [
+      "R,R,R",
+      "Rste Schritte"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "The Idea",
+    "section": "",
+    "text": "The aim of this site is simple:\nGather up useful information on R, Ecology and Statistics here.\nUse it as a “cheat sheet” or digital garden for basic knowledge.\nYou can help by participating or pointing out mistakes by commenting.",
+    "crumbs": [
+      "The Idea"
+    ]
+  },
+  {
+    "objectID": "Roadmap.html",
+    "href": "Roadmap.html",
+    "title": "Roadmap",
+    "section": "",
+    "text": "I’ll just put my initial ideas for further Rticles 😏 here:\n\nAdvanced Basics of \\(R\\) (Loops, Functions, Examples)\nBasic Statistics in \\(R\\) with examples (t-tests, linear models, examples)\nFurther statistics (GLM, GAM, NLS and when to use them)\nStatistical theory (MLE, sum of least squares, normal distribution, equations)\nBaysian Statistics in \\(R\\)\nLiterature recommendations/Further readings for each Rticle\n\nYou can add your ideas down below by commenting.",
+    "crumbs": [
+      "Roadmap"
     ]
   }
 ]

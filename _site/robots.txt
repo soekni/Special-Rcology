@@ -1,1 +1,1 @@
-Sitemap: https://soekni.github.io/Special-Rcology/sitemap.xml
+Sitemap: https://soekni.quarto.pub/special-rcology/sitemap.xml

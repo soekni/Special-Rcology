@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://soekni.github.io/Special-Rcology/index.html</loc>
+    <loc>https://7f2eb592-013c-4e8e-904e-60c8dfd334e8.netlify.app/index.html</loc>
     <lastmod>2024-10-19T17:56:16.619Z</lastmod>
   </url>
   <url>
-    <loc>https://soekni.github.io/Special-Rcology/Roadmap.html</loc>
-    <lastmod>2024-10-19T11:46:34.181Z</lastmod>
+    <loc>https://7f2eb592-013c-4e8e-904e-60c8dfd334e8.netlify.app/authoring.html</loc>
+    <lastmod>2024-10-19T17:55:27.842Z</lastmod>
   </url>
   <url>
-    <loc>https://soekni.github.io/Special-Rcology/about.html</loc>
-    <lastmod>2024-10-19T17:50:49.495Z</lastmod>
-  </url>
-  <url>
-    <loc>https://soekni.github.io/Special-Rcology/R/Rste_Schritte.html</loc>
+    <loc>https://7f2eb592-013c-4e8e-904e-60c8dfd334e8.netlify.app/R/Rste_Schritte.html</loc>
     <lastmod>2024-10-19T11:30:35.161Z</lastmod>
   </url>
   <url>
-    <loc>https://soekni.github.io/Special-Rcology/authoring.html</loc>
-    <lastmod>2024-10-19T17:55:27.842Z</lastmod>
+    <loc>https://7f2eb592-013c-4e8e-904e-60c8dfd334e8.netlify.app/about.html</loc>
+    <lastmod>2024-10-19T17:50:49.495Z</lastmod>
+  </url>
+  <url>
+    <loc>https://7f2eb592-013c-4e8e-904e-60c8dfd334e8.netlify.app/Roadmap.html</loc>
+    <lastmod>2024-10-19T11:46:34.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://soekni.quarto.pub/special-rcology/index.html</loc>
+    <lastmod>2024-10-19T17:56:16.619Z</lastmod>
   </url>
 </urlset>

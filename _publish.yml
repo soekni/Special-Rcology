@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 7f2eb592-013c-4e8e-904e-60c8dfd334e8
+      url: 'https://soekni.quarto.pub/special-rcology'

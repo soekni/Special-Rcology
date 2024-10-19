@@ -20,11 +20,3 @@ I'll just put my initial ideas for further *Rticles* 😏 here:
 -   Literature recommendations/Further readings for each *Rticle*
 
 You can add your ideas down below by commenting.
-
-<script src="https://utteranc.es/client.js"
-        repo="soekni/Special-Rcology"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
