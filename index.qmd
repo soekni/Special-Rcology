@@ -8,14 +8,15 @@ title: "Special-Rcology"
 
 You can easily contribute via github by following these steps:
 
--   "Low key contribution": Just leave a comment on the article you want to enhance. This is especially wanted for general feedback (structure, content etc.)!
+-   "**Low key contribution**": Just leave a comment on the article you want to enhance. This is especially wanted for general feedback (structure, content etc.)!
 
--   "I want to add notes myself!"
+-   "**I want to add notes myself!**"
 
 No problem! It's very easy, really. To get started, watch this [video](https://youtu.be/CML6vfKjQss&t=1m45s) for 2 minutes and you're good to go!
 
 Here's a transcript of what to do:
 
+:::{.callout-important}
 1.  Create a github account [here](https://github.com/login)!
 2.  Install *git* on your machine.
 3.  Go to the project's website [repository](https://github.com/soekni/Special-Rcology).
@@ -26,15 +27,19 @@ Here's a transcript of what to do:
 git clone https://github.com/soekni/Special-Rcology.git
 ```
 
-in your terminal/console. Make sure to open the terminal at your desired location or change the directory using the "cd *locationToYourPath*".
+in your terminal/console. <br>
+Make sure to open the terminal at your desired location or change the directory using the "cd *locationToYourPath*".
 
-6.  Now you're good to go! Change/Add files/notes using Quarto. Check out [this article](https://www.markdownguide.org/basic-syntax/) for learning the basics of markdown to just get started! If you want to learn more about authoring content/styling, visit the respective site in the navigation bar above.
+:::
+
+Now you're good to go! Change/Add files/notes using Quarto. Check out [this article](https://www.markdownguide.org/basic-syntax/) for learning the basics of markdown to just get started! <br>
+If you want to learn more about authoring content/styling, visit the respective site in the navigation bar on the left.
 
 # Further reading
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-# Troubleshoot
+# Troubleshooting
 
 You can leave a comment or contact me directly when you're having issues following the setup. Ideally, this should be a "many hands make light work" - kind of thing.
 

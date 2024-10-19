@@ -4,9 +4,10 @@ title: "Authoring Content"
 
 # Brief Introduction
 
-> **TLDR;**
->
-> Create a new Quarto file (.qmd-file) in RStudio and save it within the main directory (where the .Rproj-file is). Then just add the name of the .qmd-file to the \_quarto.yml file (also open it within RStudio). Like this:
+:::{.callout-important}
+ **TLDR;**
+
+Create a new Quarto file (.qmd-file) in RStudio and save it within the main directory (where the .Rproj-file is). Then just add the name of the .qmd-file to the \_quarto.yml file (also open it within RStudio). Like this:
 
 ``` r
 
@@ -22,6 +23,7 @@ website:
         text: *YOUR NAME FOR CONTENT*
         
 ```
+:::
 
 ## What is Markdown?
 
