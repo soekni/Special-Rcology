@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Special-Rcology</title>
+<title>Roadmap – Special-Rcology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -101,6 +67,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -130,6 +125,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./authoring.html"> 
 <span class="menu-text">Authoring</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./R/Rste_Schritte.html"> 
+<span class="menu-text">Rste Schritte</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Roadmap.html" aria-current="page"> 
+<span class="menu-text">Roadmap</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -141,22 +144,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Special-Rcology</h1>
+<h1 class="title">Roadmap</h1>
 </div>
 
 
@@ -173,35 +169,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>🛠️ <strong>This is a Quarto website still in development.</strong> 🏗️</p>
-<section id="setup" class="level1">
-<h1>Setup</h1>
-<p>You can easily contribute via github by following these steps:</p>
+<p>I’ll just put my initial ideas for further <em>Rticles</em> 😏 here:</p>
 <ul>
-<li><p>“Low key contribution”: Just leave a comment on the article you want to enhance. This is especially wanted for general feedback (structure, content etc.)!</p></li>
-<li><p>“I want to add notes myself!”</p></li>
+<li><p>Advanced Basics of <span class="math inline">\(R\)</span> (Loops, Functions, Examples)</p></li>
+<li><p>Basic Statistics in <span class="math inline">\(R\)</span> with examples (t-tests, linear models, examples)</p></li>
+<li><p>Further statistics (GLM, GAM, NLS and when to use them)</p></li>
+<li><p>Statistical theory (MLE, sum of least squares, normal distribution, equations)</p></li>
+<li><p>Baysian Statistics in <span class="math inline">\(R\)</span></p></li>
+<li><p>Literature recommendations/Further readings for each <em>Rticle</em></p></li>
 </ul>
-<p>No problem! It’s very easy, really. To get started, watch this <a href="https://youtu.be/CML6vfKjQss&amp;t=1m45s">video</a> for 2 minutes and you’re good to go!</p>
-<p>Here’s a transcript of what to do:</p>
-<ol type="1">
-<li>Create a github account <a href="https://github.com/login">here</a>!</li>
-<li>Install <em>git</em> on your machine.</li>
-<li>Go to the project’s website <a href="https://github.com/soekni/Special-Rcology">repository</a>.</li>
-<li>Fork it by clicking the button on the top right!</li>
-<li>After linking the forked repo to your account, clone/download the files at your desired destination using:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git clone https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>soekni<span class="sc">/</span>Special<span class="sc">-</span>Rcology.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>in your terminal/console. Make sure to open the terminal at your desired location or change the directory using the “cd <em>locationToYourPath</em>”.</p>
-<ol start="6" type="1">
-<li>Now you’re good to go! Change/Add files/notes using Quarto. Check out <a href="https://www.markdownguide.org/basic-syntax/">this article</a> for learning the basics of markdown to just get started! If you want to learn more about authoring content/styling, visit the respective site in the navigation bar above.</li>
-</ol>
-</section>
-<section id="further-reading" class="level1">
-<h1>Further reading</h1>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<p>You can add your ideas down below by commenting.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,5 @@
+---
+title: "Rste Schritte"
+---
+
+When first using $R$, try this [website](https://mbrede.github.io/KFN_MethodLab_24/rste_schritte.html) (in german) or this [resource](https://rstudio-education.github.io/hopr/) in english.

@@ -2,11 +2,34 @@
 title: "Authoring Content"
 ---
 
-**Get a brief introduction about the markdown basics used to build this blog!**
+# Brief Introduction
 
-A markup file is a text file with embedded commands.
+> **TLDR;**
+>
+> Create a new Quarto file (.qmd-file) in RStudio and save it within the main directory (where the .Rproj-file is). Then just add the name of the .qmd-file to the \_quarto.yml file (also open it within RStudio). Like this:
+
+``` r
+
+website:
+  title: "Special-Rcology"
+  navbar:
+    left:
+      - href: about.qmd
+        text: The Idea
+      - href: authoring.qmd
+        text: Authoring
+      - href: *YOUR CONTENT.qmd*
+        text: *YOUR NAME FOR CONTENT*
+        
+```
+
+## What is Markdown?
+
+A markup/markdown file is a text file with embedded commands.
 
 These commands can be simple text formatting characters or complete *R scripts*. A *rmd*-file ("R-Markdown") is a mixture of R commands, normal text and formatting code.
+
+## Okay cool - but how to use it?
 
 For a cheat sheet on markdown/quarto basics, visit [this site](https://www.markdownguide.org/cheat-sheet/) or have a look on [the basic syntax](https://www.markdownguide.org/basic-syntax/) for additional information. Markdown commands for special formatting such as adding colors, embedding comments, videos or table of contents, can be found [here](https://www.markdownguide.org/hacks/#overview). For an interactive beginners markdown tutorial, click [here](https://commonmark.org/help/tutorial/06-lists.html). The latter one is especially recommended. 🫶🏻🥹❤️‍🩹
 
@@ -15,7 +38,9 @@ An **impressive** resource for teaching markdown to instructors can be addressed
 Useful Quarto Extensions (for Blogging/HTML):
 
 | Name | Purpose | Link |
-|-----------------|------------------------------|-------------------------|
+|------------------|-----------------------------|-------------------------|
 | WebR | Run any R-Code on HTML file in an interactive console | https://yt.artemislena.eu/watch?v=DoRR2S5lLvk |
+
+## Additional resources
 
 When you're really in the mood of doing a deep dive into Quarto's possibilities: Here's a list of extensions for [**everything**](https://github.com/mcanouil/awesome-quarto)! 🏆

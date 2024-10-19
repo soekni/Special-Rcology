@@ -1,0 +1,27 @@
+---
+title: "Roadmap"
+---
+
+I'll just put my initial ideas for further *Rticles* 😏 here:
+
+-   Advanced Basics of $R$ (Loops, Functions, Examples)
+
+-   Basic Statistics in $R$ with examples (t-tests, linear models, examples)
+
+-   Further statistics (GLM, GAM, NLS and when to use them)
+
+-   Statistical theory (MLE, sum of least squares, normal distribution, equations)
+
+-   Baysian Statistics in $R$
+
+-   Literature recommendations/Further readings for each *Rticle*
+
+You can add your ideas down below by commenting.
+
+<script src="https://utteranc.es/client.js"
+        repo="soekni/Special-Rcology"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

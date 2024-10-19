@@ -10,6 +10,10 @@ website:
         text: The Idea
       - href: authoring.qmd
         text: Authoring
+      - href: R/Rste_Schritte.qmd
+        text: Rste Schritte
+      - href: Roadmap.qmd
+        text: Roadmap
 
 format:
   html:
