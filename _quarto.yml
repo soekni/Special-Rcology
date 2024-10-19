@@ -8,6 +8,8 @@ website:
     left:
       - href: about.qmd
         text: The Idea
+      - href: authoring.qmd
+        text: Authoring
 
 format:
   html:

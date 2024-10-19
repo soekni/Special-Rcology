@@ -22,18 +22,16 @@ Here's a transcript of what to do:
 4.  Fork it by clicking the button on the top right!
 5.  After linking the forked repo to your account, clone/download the files at your desired destination using:
 
-```         
+``` r        
 git clone https://github.com/soekni/Special-Rcology.git
 ```
 
 in your terminal/console. Make sure to open the terminal at your desired location or change the directory using the "cd *locationToYourPath*".
 
-6.  Now you're good to go! Change/Add files/notes using Quarto. Check out [this]() article for authoring content or [this]() for learning the basics of markdown!
+6.  Now you're good to go! Change/Add files/notes using Quarto. Check out [this article](https://www.markdownguide.org/basic-syntax/) for learning the basics of markdown to just get started! If you want to learn more about authoring content/styling, [this](https://soekni.github.io/Special-Rcology/authoring.html) is the article to go.
 
 # Further reading
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-``` r
-git clone https://github.com/soekni/Special-Rcology.git
-```
+
