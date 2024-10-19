@@ -44,3 +44,15 @@ Useful Quarto Extensions (for Blogging/HTML):
 ## Additional resources
 
 When you're really in the mood of doing a deep dive into Quarto's possibilities: Here's a list of extensions for [**everything**](https://github.com/mcanouil/awesome-quarto)! 🏆
+
+## FAQ
+
+Please leave a comment when you still need help after looking for the right commands etc. 
+
+<script src="https://utteranc.es/client.js"
+        repo="soekni/Special-Rcology"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
