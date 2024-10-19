@@ -1,17 +1,17 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Special-Rcology"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: about.qmd
+        text: The Idea
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     css: styles.css
     toc: true
 

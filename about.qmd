@@ -1,9 +1,23 @@
 ---
-title: "About"
+title: "The Idea"
+about:
+  template: jolla
+  links:
+    - icon: mastodon
+      text: Mastodon
+      href: https://dresden.network/@7eruS
+    - icon: github
+      text: Github
+      href: https://github.com/soekni
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
-About this site
+The aim of this site is simple:
 
-```{r}
-1 + 1
-```
+Gather up useful information on R, Ecology and Statistics here.
+
+Use it as a "cheat sheet" or digital garden for basic knowledge.
+
+*You can help* by [participating](link) or pointing out mistakes by commenting.

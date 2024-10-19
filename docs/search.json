@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Special-Rcology",
+    "section": "",
+    "text": "This is a Quarto website still in development. 🏗️ # Setup You can easily contribute via github by following these steps:\n\n“Low key contribution”: Just leave a comment on the article you want to enhance. This is especially wanted for general feedback (structure, content etc.)!\n“I want to add notes myself!”\n\nNo problem! It’s very easy, really. To get started, watch this video for 2 minutes and you’re good to go!\nHere’s a transcript of what to do: 1. Create a github account here! 2. Go to the project’s website repository. 3. Fork it by clicking the button on the top right! 4. After linking the forked repo to your account, clone/download the files at your desired destination using:\ngit clone \n\nNow you’re good to go! Change/Add files/notes using Quarto. Check out this article for authoring content or this for learning the basics of markdown!\n\n\nFurther reading\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "The Idea",
+    "section": "",
+    "text": "The aim of this site is simple:\nGather up useful information on R, Ecology and Statistics here.\nUse it as a “cheat sheet” or digital garden for basic knowledge.\nYou can help by participating or pointing out mistakes by commenting."
+  }
+]
