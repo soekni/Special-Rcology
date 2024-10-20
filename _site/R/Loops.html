@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Approximation methods in the Bayesian universe – Special-Rcology</title>
+<title>Loops - Falling through time – Special-Rcology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../R/Loops.html" rel="prev">
+<link href="../R/approximation.html" rel="next">
+<link href="../R/Rste_Schritte.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -146,7 +147,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R/Rste_Schritte.html">R,R,R</a></li><li class="breadcrumb-item"><a href="../R/approximation.html">Approximation methods in the Bayesian universe</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R/Rste_Schritte.html">R,R,R</a></li><li class="breadcrumb-item"><a href="../R/Loops.html">Loops - Falling through time</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -223,13 +224,13 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R/Loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../R/Loops.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Loops - Falling through time</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../R/approximation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../R/approximation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Approximation methods in the Bayesian universe</span></a>
   </div>
 </li>
@@ -240,25 +241,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-grid-approximation" id="toc-the-grid-approximation" class="nav-link active" data-scroll-target="#the-grid-approximation">The grid approximation</a>
-  <ul class="collapse">
-  <li><a href="#example-earths-coverage-of-land-and-water" id="toc-example-earths-coverage-of-land-and-water" class="nav-link" data-scroll-target="#example-earths-coverage-of-land-and-water">Example: Earth’s coverage of land and water</a></li>
-  <li><a href="#the-code-aka-theory-in-practice" id="toc-the-code-aka-theory-in-practice" class="nav-link" data-scroll-target="#the-code-aka-theory-in-practice">The Code aka “Theory in Practice”</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/R/approximation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/R/approximation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R/Rste_Schritte.html">R,R,R</a></li><li class="breadcrumb-item"><a href="../R/approximation.html">Approximation methods in the Bayesian universe</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../R/Rste_Schritte.html">R,R,R</a></li><li class="breadcrumb-item"><a href="../R/Loops.html">Loops - Falling through time</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Approximation methods in the Bayesian universe</h1>
+<h1 class="title">Loops - Falling through time</h1>
 </div>
 
 
@@ -275,68 +266,69 @@ window.Quarto = {
 </header>
 
 
-<p>DISCLAIMER: The following examples are taken from Chapter 2 of the book “Statistical Rethinking” by Richard McElreath.</p>
-<p>Using a prior and a data set, there a three ways of approximating a posterior distribution:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img src="../images/louie.jpg" class="img-fluid" width="200"></td>
+<td><p>Yeah, I know. I’d also rather play <em>Looping Louie</em> with you. But here we are.</p>
+<p>So let’s try make some fun out of it.</p>
+<p>With each loop, Looping Louie tries to steal your chicken. You fail, you drink.</p>
+<p>How about a loop in <em>R</em>?</p></td>
+</tr>
+</tbody>
+</table>
+<p>First, clarify the rules and conditions:</p>
 <ul>
-<li><p>grid approximation (<em>grid</em>)</p></li>
-<li><p>quadratic approximation (<em>quap</em>)</p></li>
-<li><p>Markov Chain Monte Carlo (<em>MCMC</em>)</p></li>
+<li><p>we assume to have 4 virtual players</p></li>
+<li><p>each of them starts sober and therefore with the same probability of rescuing their chicken from Louie, <span class="math inline">\(p=1\)</span></p></li>
+<li><p>now say, each player got a random probability to not react in time, <span class="math inline">\(p*\)</span>, which ranges in between 0-0.25</p></li>
+<li><p>with each failure - and therefore: shot - you’re reaction time drops. But we’re no science quacks, so this is the appropriate formula:</p></li>
 </ul>
-<section id="the-grid-approximation" class="level2">
-<h2 class="anchored" data-anchor-id="the-grid-approximation">The grid approximation</h2>
-<p>Since Bayesian statistics relies on updating the posterior distribution iteratively by looking at the data set and finding a way to fit it to the prior, the grid approximation remains a good way of showcasing this process. (For mathematically complex models - meaning: more parameters - this approach soon becomes unsuitable, though.)</p>
-<section id="example-earths-coverage-of-land-and-water" class="level3">
-<h3 class="anchored" data-anchor-id="example-earths-coverage-of-land-and-water">Example: Earth’s coverage of land and water</h3>
-<p>Let’s imagine we want to know how much of the earth’s surface is covered by water. We know the exact answer to be ~ 73%, but the model we’re gonna build doesn’t. So this makes a good example of how models only help when properly trained.</p>
-<p>The model equation itself is based on Bayes Theorem:</p>
-<p>The theorem tells us how to update our belief about <span class="math inline">\(p\)</span> after observing the data (here <span class="math inline">\(W+L\)</span>), by combining how well <span class="math inline">\(p\)</span> explains the data (the likelihood) with what we already believed about <span class="math inline">\(p\)</span> (the prior), and then normalizing it by the denominator to make sure it forms a valid probability distribution.</p>
-<p>In this case, the formula is: <span class="math inline">\(Pr(p|W,L)=\frac{Pr(W,L|p)*Pr(p)}{Pr(W,L)}\)</span> Looks horrifying? Well, maybe. Let’s break down each term:</p>
+<div class="text-center">
+<p><span class="math inline">\(\text{Blood Alcohol Concentration BAC}=\frac{A*5.14}{W*r}​−0.015*T\)</span></p>
+</div>
+<p>Where:</p>
 <ul>
-<li><p><span class="math inline">\(Pr(p)\)</span> = our prior belief of what <span class="math inline">\(p\)</span> might be in reality <em>before</em> we see the data.</p></li>
-<li><p><span class="math inline">\(Pr(W,L|p)\)</span> = likelihood (we observe some data and then calculate how likely that data is under different values of <span class="math inline">\(p\)</span>) Think of it as a vector: You generate a vector of probabilities, where each entry corresponds to a different possible value of <span class="math inline">\(p\)</span>, and for each <span class="math inline">\(p\)</span>, you calculate the likelihood <span class="math inline">\(Pr(W,L∣p)*Pr(p)\)</span>. The maximum value out of that vector represents the most probable value of <span class="math inline">\(p\)</span> that aligns the data best with the prior. In order to standardize it, you need to equate the sum of all values, which is <span class="math inline">\(Pr(W,L)\)</span>.</p></li>
-<li><p><span class="math inline">\(Pr(p)*Pr(W,L|p)\)</span> = unstandardized posterior</p></li>
+<li><p><strong>A</strong> = Total alcohol consumed in grams (one schnaps ~ 6.3g pure alcohol)</p></li>
+<li><p><strong>W</strong> = Body weight in pounds (simplify it to be W=150pounds)</p></li>
+<li><p><strong>r</strong> = Alcohol distribution ratio (0.68 for men, 0.55 for women; for now, lets assume it to be equal at 0.6 for both sex)</p></li>
+<li><p><strong>T</strong> = Time since drinking began (in hours; one game is around 15 minutes, so T=0.25)</p></li>
+<li><p>The factor 0.015 represents the average rate of alcohol elimination from the body per hour.</p></li>
 </ul>
-<p>So in words, the equation would be:</p>
-<p><span class="math inline">\(Posterior\ distribution = \frac{\text{"Likelihood for each combination of the data * prior"} \times \text{"Prior probability"}}{\text{"Sum of Likelihoods over all possible values of p"}}\)</span></p>
-</section>
-<section id="the-code-aka-theory-in-practice" class="level3">
-<h3 class="anchored" data-anchor-id="the-code-aka-theory-in-practice">The Code aka “Theory in Practice”</h3>
-<p>Now, we apply it in R to see what all of this means in practice:</p>
+<p>So, in total this means: Assumed each player gets to react once per minute, in total 15 “skill checks” are required per player per game. We still need to assign the punishment for our drunkards. Don’t drink and fly! That’s not an easy decision, so lets just have a look on our plotted BAC-function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Defining the grid</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>p_grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>,<span class="at">to=</span><span class="dv">1</span>, <span class="at">length.out=</span> <span class="dv">20</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># on each value of the grid (=x), a posterior probability (=y) will be calculated</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Defining the prior</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>prior <span class="ot">&lt;-</span> <span class="fu">rep</span> (<span class="dv">1</span>,<span class="dv">20</span>) <span class="co"># just repeat "p=1" 20 times to create a uniform distribution</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Compute likelihood at each value in grid</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>likelihood <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(<span class="dv">6</span>,<span class="at">size=</span><span class="dv">9</span>, <span class="at">prob=</span>p_grid)<span class="co">#we had 6 water observations out of a sample = 9; calculate the likelihood for each grid step</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute product of likelihood and prior</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>unstd.posterior <span class="ot">&lt;-</span> likelihood <span class="sc">*</span> prior</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#standardize the posterior, so it sums to 1</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>posterior <span class="ot">&lt;-</span> unstd.posterior <span class="sc">/</span> <span class="fu">sum</span>(unstd.posterior)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot it</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p_grid, posterior, <span class="at">type =</span><span class="st">"b"</span>,<span class="co">#equals to plot(x,y, "use bullets, not line)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">xlab=</span><span class="st">"probability of water"</span>, <span class="at">ylab=</span><span class="st">"posterior probability"</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="st">"20 points"</span>)<span class="co">#assign a simple heading to the plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x<span class="sc">*</span><span class="fl">6.3</span><span class="sc">*</span><span class="fl">5.14</span><span class="sc">/</span>(<span class="dv">150</span><span class="sc">*</span><span class="fl">0.6</span>)<span class="sc">-</span><span class="fl">0.015</span><span class="sc">*</span>t</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x=</span>x, <span class="at">t=</span>t, <span class="at">y=</span>y) <span class="co">#Create a dataframe</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot it</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">t=</span>t)) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"BAC Over Time for Different Number of Drinks"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">x=</span><span class="st">"Number of Drinks (x)"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">y=</span><span class="st">"Blood Alcohol Concentration (BAC)"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">color=</span><span class="st">"Time (hours)"</span>) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>()</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="approximation_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Loops_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Applying the uniform distribution here means we’re very cautious in our assumption and want the model to adjust the posterior distribution only to the data its about to see.</p>
-<p><em>TBC</em>…</p>
+<p>So, assuming you’d be a complete moron and fail each round, there’s permanent death awaiting you at the end of the game. <br> After 6-8 shots you should no longer be able to play this game. So, given that prior knowledge, lets adjust our research question: <br></p>
+<p><strong>“<em>Which of the players are still alive after one game?</em>”</strong> <br> For my part, I’d rather prefer switching to Beerpong, instead..</p>
+<p><em>TBC</em></p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -907,11 +899,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../R/Loops.html" class="pagination-link" aria-label="Loops - Falling through time">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Loops - Falling through time</span>
+      <a href="../R/Rste_Schritte.html" class="pagination-link" aria-label="Rste Schritte">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Rste Schritte</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../R/approximation.html" class="pagination-link" aria-label="Approximation methods in the Bayesian universe">
+        <span class="nav-page-text">Approximation methods in the Bayesian universe</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -928,7 +923,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/R/approximation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/R/approximation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/R/Loops.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/R/Loops.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

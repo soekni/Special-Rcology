@@ -67,6 +67,17 @@
     "text": "Here’s an unsorted list of various terms that you’re likely (oh no, there’s the first one!! 😱) to come across. Over time, this list is gonna reviewed and refined. But for now, lets just DO IT!\nNon-Bayesian Statistics:\n\nparameter: the variable you want to investigate with your data/want to predict. Think of it like a blueprint for a model. Given specific values, the parameters describe the process of how … through the model equation (and its underlying assumptions like linearity or including error terms etc.)\nMaximum Likelihood Estimate (MLE): Statistical method that aims for finding those values for a given parameter, that makes the observed data (=your dataset) most likely. This method assumes a certain distribution (f.e. a normal distribution).\n\nExample: As you may have seen from the previous meme section, every model is trained on a given data set. This also includes the possibility of the model being unsuitable to predict anything, when the base assumptions are flawed. MLE aims to find the parameter of a model in a way that the probability of the model producing the observed data is maximized. However, the “quality” of this process is linked to the sample size, meaning that …\nBayesian Statistics:\n\nprior:\ndistribution:\n\nuniform: every possible outcome in a distribution has the same likelihood to occur (Example: A classic dice with 6 sides.) In Bayesian models, assigning a uniform prior is another way of saying “I don’t have any reason to believe one outcome is more likely than another, so I’ll treat them all the same.”\n\nposterior: What values for the parameter are probable after seeing the data with the assigned prior?\nquadratic approximation (quap): Simplify complex model equations to fit a quadratic shape on the peak (assumption: gaussian distribution of the peak) of the investigated data.\n\nTrivia: Why is the quap often equivalent to the MLE (given high sample size or uniform prior)? Both focus to approximate the peak of a distribution. Both assume that to be gaussian. A gaussian curve is very similar to a quadratic shape at its peak. When the prior is uniform, no parameter value in the posterior distribution will be favored, resulting in a similar outcome of the approximated peak for the investigated parameter."
   },
   {
+    "objectID": "R/Rste_Schritte.html",
+    "href": "R/Rste_Schritte.html",
+    "title": "Rste Schritte",
+    "section": "",
+    "text": "Hey, fellow! Let’s waddle our way through the very basics of my favorite program: It’s *\\(R,R,R\\)* - sorry for that.  But hold on and its gonna be fun.. eventually.\nWhen first using \\(R\\), try this website (in german) or this resource in english.\n\n\n\nDon’t feel sad if things won’t work. Instead, have a look at my 🌟 All-StR 🌟memes:",
+    "crumbs": [
+      "R,R,R",
+      "Rste Schritte"
+    ]
+  },
+  {
     "objectID": "R/approximation.html",
     "href": "R/approximation.html",
     "title": "Approximation methods in the Bayesian universe",
@@ -89,14 +100,14 @@
     ]
   },
   {
-    "objectID": "R/Rste_Schritte.html",
-    "href": "R/Rste_Schritte.html",
-    "title": "Rste Schritte",
+    "objectID": "R/Loops.html",
+    "href": "R/Loops.html",
+    "title": "Loops - Falling through time",
     "section": "",
-    "text": "Hey, fellow! Let’s waddle our way through the very basics of my favorite program: It’s *\\(R,R,R\\)* - sorry for that.  But hold on and its gonna be fun.. eventually.\nWhen first using \\(R\\), try this website (in german) or this resource in english.\n\n\n\nDon’t feel sad if things won’t work. Instead, have a look at my 🌟 All-StR 🌟memes:",
+    "text": "Yeah, I know. I’d also rather play Looping Louie with you. But here we are.\nSo let’s try make some fun out of it.\nWith each loop, Looping Louie tries to steal your chicken. You fail, you drink.\nHow about a loop in R?\n\n\n\nFirst, clarify the rules and conditions:\n\nwe assume to have 4 virtual players\neach of them starts sober and therefore with the same probability of rescuing their chicken from Louie, \\(p=1\\)\nnow say, each player got a random probability to not react in time, \\(p*\\), which ranges in between 0-0.25\nwith each failure - and therefore: shot - you’re reaction time drops. But we’re no science quacks, so this is the appropriate formula:\n\n\n\\(\\text{Blood Alcohol Concentration BAC}=\\frac{A*5.14}{W*r}​−0.015*T\\)\n\nWhere:\n\nA = Total alcohol consumed in grams (one schnaps ~ 6.3g pure alcohol)\nW = Body weight in pounds (simplify it to be W=150pounds)\nr = Alcohol distribution ratio (0.68 for men, 0.55 for women; for now, lets assume it to be equal at 0.6 for both sex)\nT = Time since drinking began (in hours; one game is around 15 minutes, so T=0.25)\nThe factor 0.015 represents the average rate of alcohol elimination from the body per hour.\n\nSo, in total this means: Assumed each player gets to react once per minute, in total 15 “skill checks” are required per player per game. We still need to assign the punishment for our drunkards. Don’t drink and fly! That’s not an easy decision, so lets just have a look on our plotted BAC-function:\n\nx &lt;- c(1:15)\nt &lt;- c(1:15)\ny &lt;- x*6.3*5.14/(150*0.6)-0.015*t\ndf &lt;- data.frame(x=x, t=t, y=y) #Create a dataframe\n\n#Plot it\nlibrary(ggplot2)\nplot &lt;- ggplot(df, aes(x=x, y=y, t=t)) +\ngeom_line() +\nlabs(title=\"BAC Over Time for Different Number of Drinks\",\nx=\"Number of Drinks (x)\",\ny=\"Blood Alcohol Concentration (BAC)\",\ncolor=\"Time (hours)\") +\ntheme_minimal()\nplot\n\n\n\n\n\n\n\n\nSo, assuming you’d be a complete moron and fail each round, there’s permanent death awaiting you at the end of the game.  After 6-8 shots you should no longer be able to play this game. So, given that prior knowledge, lets adjust our research question: \n“Which of the players are still alive after one game?”  For my part, I’d rather prefer switching to Beerpong, instead..\nTBC",
     "crumbs": [
       "R,R,R",
-      "Rste Schritte"
+      "Loops - Falling through time"
     ]
   },
   {

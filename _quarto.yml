@@ -35,6 +35,8 @@ website:
         contents:
         - href: R/Rste_Schritte.qmd
           text: Rste Schritte
+        - href: R/Loops.qmd
+          text: Loops - Falling through time
         - href: R/approximation.qmd
           text: Approximation methods in the Bayesian universe
 

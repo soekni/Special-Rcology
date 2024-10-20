@@ -1,0 +1,65 @@
+---
+title: Loops - Falling through time
+---
+
++-------------------------------------+---------------------------------------------------------------------------------+
+| ![](/images/louie.jpg){width="200"} | Yeah, I know. I'd also rather play *Looping Louie* with you. But here we are.   |
+|                                     |                                                                                 |
+|                                     | So let's try make some fun out of it.                                           |
+|                                     |                                                                                 |
+|                                     | With each loop, Looping Louie tries to steal your chicken. You fail, you drink. |
+|                                     |                                                                                 |
+|                                     | How about a loop in *R*?                                                        |
++-------------------------------------+---------------------------------------------------------------------------------+
+
+First, clarify the rules and conditions:
+
+-   we assume to have 4 virtual players
+
+-   each of them starts sober and therefore with the same probability of rescuing their chicken from Louie, $p=1$
+
+-   now say, each player got a random probability to not react in time, $p*$, which ranges in between 0-0.25
+
+-   with each failure - and therefore: shot - you're reaction time drops. But we're no science quacks, so this is the appropriate formula:
+
+::: text-center
+$\text{Blood Alcohol Concentration BAC}=\frac{A*5.14}{W*r}​−0.015*T$
+:::
+
+Where:
+
+-   **A** = Total alcohol consumed in grams (one schnaps \~ 6.3g pure alcohol)
+
+-   **W** = Body weight in pounds (simplify it to be W=150pounds)
+
+-   **r** = Alcohol distribution ratio (0.68 for men, 0.55 for women; for now, lets assume it to be equal at 0.6 for both sex)
+
+-   **T** = Time since drinking began (in hours; one game is around 15 minutes, so T=0.25)
+
+-   The factor 0.015 represents the average rate of alcohol elimination from the body per hour.
+
+So, in total this means: Assumed each player gets to react once per minute, in total 15 "skill checks" are required per player per game. We still need to assign the punishment for our drunkards. Don't drink and fly! That's not an easy decision, so lets just have a look on our plotted BAC-function:
+
+```{r}
+x <- c(1:15)
+t <- c(1:15)
+y <- x*6.3*5.14/(150*0.6)-0.015*t
+df <- data.frame(x=x, t=t, y=y) #Create a dataframe
+
+#Plot it
+library(ggplot2)
+plot <- ggplot(df, aes(x=x, y=y, t=t)) +
+geom_line() +
+labs(title="BAC Over Time for Different Number of Drinks",
+x="Number of Drinks (x)",
+y="Blood Alcohol Concentration (BAC)",
+color="Time (hours)") +
+theme_minimal()
+plot
+```
+
+So, assuming you'd be a complete moron and fail each round, there's permanent death awaiting you at the end of the game. <br> After 6-8 shots you should no longer be able to play this game. So, given that prior knowledge, lets adjust our research question: <br>
+
+**"*Which of the players are still alive after one game?*"** <br> For my part, I'd rather prefer switching to Beerpong, instead..
+
+*TBC*
