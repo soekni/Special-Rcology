@@ -1,0 +1,96 @@
+---
+title: Approximation methods in the Bayesian universe
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+DISCLAIMER: The following examples are taken from Chapter 2 of the book
+"Statistical Rethinking" by Richard McElreath.
+
+Using a prior and a data set, there a three ways of approximating a
+posterior distribution:
+
+-   grid approximation (*grid*)
+
+-   quadratic approximation (*quap*)
+
+-   Markov Chain Monte Carlo (*MCMC*)
+
+## The grid approximation
+
+Since Bayesian statistics relies on updating the posterior distribution
+iteratively by looking at the data set and finding a way to fit it to
+the prior, the grid approximation remains a good way of showcasing this
+process. (For mathematically complex models - meaning: more parameters -
+this approach soon becomes unsuitable, though.)
+
+### Example: Earth's coverage of land and water
+
+Let's imagine we want to know how much of the earth's surface is covered
+by water. We know the exact answer to be \~ 73%, but the model we're
+gonna build doesn't. So this makes a good example of how models only
+help when properly trained.
+
+The model equation itself is based on Bayes Theorem:
+
+The theorem tells us how to update our belief about $p$ after observing
+the data (here $W+L$), by combining how well $p$ explains the data (the
+likelihood) with what we already believed about $p$ (the prior), and
+then normalizing it by the denominator to make sure it forms a valid
+probability distribution.
+
+In this case, the formula is:
+$Pr(p|W,L)=\frac{Pr(W,L|p)*Pr(p)}{Pr(W,L)}$ Looks horrifying? Well,
+maybe. Let's break down each term:
+
+-   $Pr(p)$ = our prior belief of what $p$ might be in reality *before*
+    we see the data.
+
+-   $Pr(W,L|p)$ = likelihood (we observe some data and then calculate
+    how likely that data is under different values of $p$) Think of it
+    as a vector: You generate a vector of probabilities, where each
+    entry corresponds to a different possible value of $p$, and for each
+    $p$, you calculate the likelihood $Pr(W,L∣p)*Pr(p)$. The maximum
+    value out of that vector represents the most probable value of $p$
+    that aligns the data best with the prior. In order to standardize
+    it, you need to equate the sum of all values, which is $Pr(W,L)$.
+
+-   $Pr(p)*Pr(W,L|p)$ = unstandardized posterior
+
+So in words, the equation would be:
+
+$Posterior\ distribution = \frac{\text{"Likelihood for each combination of the data * prior"} \times \text{"Prior probability"}}{\text{"Sum of Likelihoods over all possible values of p"}}$
+
+### The Code aka "Theory in Practice"
+
+Now, we apply it in R to see what all of this means in practice:
+
+```{r}
+#Defining the grid
+p_grid <- seq(from=0,to=1, length.out= 20)
+# on each value of the grid (=x), a posterior probability (=y) will be calculated
+
+# Defining the prior
+prior <- rep (1,20) # just repeat "p=1" 20 times to create a uniform distribution
+
+#Compute likelihood at each value in grid
+likelihood <- dbinom(6,size=9, prob=p_grid)#we had 6 water observations out of a sample = 9; calculate the likelihood for each grid step
+
+# Compute product of likelihood and prior
+unstd.posterior <- likelihood * prior
+
+#standardize the posterior, so it sums to 1
+posterior <- unstd.posterior / sum(unstd.posterior)
+
+# Plot it
+plot(p_grid, posterior, type ="b",#equals to plot(x,y, "use bullets, not line)
+xlab="probability of water", ylab="posterior probability")
+mtext("20 points")#assign a simple heading to the plot
+```
+
+Applying the uniform distribution here means we're very cautious in our
+assumption and want the model to adjust the posterior distribution only
+to the data its about to see.
+
+*TBC*...

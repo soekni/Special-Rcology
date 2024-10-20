@@ -60,11 +60,40 @@
     ]
   },
   {
+    "objectID": "unreleased/Vocab.html",
+    "href": "unreleased/Vocab.html",
+    "title": "Vocab of the Statistics Apprentice",
+    "section": "",
+    "text": "Here’s an unsorted list of various terms that you’re likely (oh no, there’s the first one!! 😱) to come across. Over time, this list is gonna reviewed and refined. But for now, lets just DO IT!\nNon-Bayesian Statistics:\n\nparameter: the variable you want to investigate with your data/want to predict. Think of it like a blueprint for a model. Given specific values, the parameters describe the process of how … through the model equation (and its underlying assumptions like linearity or including error terms etc.)\nMaximum Likelihood Estimate (MLE): Statistical method that aims for finding those values for a given parameter, that makes the observed data (=your dataset) most likely. This method assumes a certain distribution (f.e. a normal distribution).\n\nExample: As you may have seen from the previous meme section, every model is trained on a given data set. This also includes the possibility of the model being unsuitable to predict anything, when the base assumptions are flawed. MLE aims to find the parameter of a model in a way that the probability of the model producing the observed data is maximized. However, the “quality” of this process is linked to the sample size, meaning that …\nBayesian Statistics:\n\nprior:\ndistribution:\n\nuniform: every possible outcome in a distribution has the same likelihood to occur (Example: A classic dice with 6 sides.) In Bayesian models, assigning a uniform prior is another way of saying “I don’t have any reason to believe one outcome is more likely than another, so I’ll treat them all the same.”\n\nposterior: What values for the parameter are probable after seeing the data with the assigned prior?\nquadratic approximation (quap): Simplify complex model equations to fit a quadratic shape on the peak (assumption: gaussian distribution of the peak) of the investigated data.\n\nTrivia: Why is the quap often equivalent to the MLE (given high sample size or uniform prior)? Both focus to approximate the peak of a distribution. Both assume that to be gaussian. A gaussian curve is very similar to a quadratic shape at its peak. When the prior is uniform, no parameter value in the posterior distribution will be favored, resulting in a similar outcome of the approximated peak for the investigated parameter."
+  },
+  {
+    "objectID": "R/approximation.html",
+    "href": "R/approximation.html",
+    "title": "Approximation methods in the Bayesian universe",
+    "section": "",
+    "text": "DISCLAIMER: The following examples are taken from Chapter 2 of the book “Statistical Rethinking” by Richard McElreath.\nUsing a prior and a data set, there a three ways of approximating a posterior distribution:",
+    "crumbs": [
+      "R,R,R",
+      "Approximation methods in the Bayesian universe"
+    ]
+  },
+  {
+    "objectID": "R/approximation.html#the-grid-approximation",
+    "href": "R/approximation.html#the-grid-approximation",
+    "title": "Approximation methods in the Bayesian universe",
+    "section": "The grid approximation",
+    "text": "The grid approximation\nSince Bayesian statistics relies on updating the posterior distribution iteratively by looking at the data set and finding a way to fit it to the prior, the grid approximation remains a good way of showcasing this process. (For mathematically complex models - meaning: more parameters - this approach soon becomes unsuitable, though.)\n\nExample: Earth’s coverage of land and water\nLet’s imagine we want to know how much of the earth’s surface is covered by water. We know the exact answer to be ~ 73%, but the model we’re gonna build doesn’t. So this makes a good example of how models only help when properly trained.\nThe model equation itself is based on Bayes Theorem:\nThe theorem tells us how to update our belief about \\(p\\) after observing the data (here \\(W+L\\)), by combining how well \\(p\\) explains the data (the likelihood) with what we already believed about \\(p\\) (the prior), and then normalizing it by the denominator to make sure it forms a valid probability distribution.\nIn this case, the formula is: \\(Pr(p|W,L)=\\frac{Pr(W,L|p)*Pr(p)}{Pr(W,L)}\\) Looks horrifying? Well, maybe. Let’s break down each term:\n\n\\(Pr(p)\\) = our prior belief of what \\(p\\) might be in reality before we see the data.\n\\(Pr(W,L|p)\\) = likelihood (we observe some data and then calculate how likely that data is under different values of \\(p\\)) Think of it as a vector: You generate a vector of probabilities, where each entry corresponds to a different possible value of \\(p\\), and for each \\(p\\), you calculate the likelihood \\(Pr(W,L∣p)*Pr(p)\\). The maximum value out of that vector represents the most probable value of \\(p\\) that aligns the data best with the prior. In order to standardize it, you need to equate the sum of all values, which is \\(Pr(W,L)\\).\n\\(Pr(p)*Pr(W,L|p)\\) = unstandardized posterior\n\nSo in words, the equation would be:\n\\(Posterior\\ distribution = \\frac{\\text{\"Likelihood for each combination of the data * prior\"} \\times \\text{\"Prior probability\"}}{\\text{\"Sum of Likelihoods over all possible values of p\"}}\\)\n\n\nThe Code aka “Theory in Practice”\nNow, we apply it in R to see what all of this means in practice:\n\n#Defining the grid\np_grid &lt;- seq(from=0,to=1, length.out= 20)\n# on each value of the grid (=x), a posterior probability (=y) will be calculated\n\n# Defining the prior\nprior &lt;- rep (1,20) # just repeat \"p=1\" 20 times to create a uniform distribution\n\n#Compute likelihood at each value in grid\nlikelihood &lt;- dbinom(6,size=9, prob=p_grid)#we had 6 water observations out of a sample = 9; calculate the likelihood for each grid step\n\n# Compute product of likelihood and prior\nunstd.posterior &lt;- likelihood * prior\n\n#standardize the posterior, so it sums to 1\nposterior &lt;- unstd.posterior / sum(unstd.posterior)\n\n# Plot it\nplot(p_grid, posterior, type =\"b\",#equals to plot(x,y, \"use bullets, not line)\nxlab=\"probability of water\", ylab=\"posterior probability\")\nmtext(\"20 points\")#assign a simple heading to the plot\n\n\n\n\n\n\n\n\nApplying the uniform distribution here means we’re very cautious in our assumption and want the model to adjust the posterior distribution only to the data its about to see.\nTBC…",
+    "crumbs": [
+      "R,R,R",
+      "Approximation methods in the Bayesian universe"
+    ]
+  },
+  {
     "objectID": "R/Rste_Schritte.html",
     "href": "R/Rste_Schritte.html",
     "title": "Rste Schritte",
     "section": "",
-    "text": "When first using \\(R\\), try this website (in german) or this resource in english.",
+    "text": "Hey, fellow! Let’s waddle our way through the very basics of my favorite program: It’s *\\(R,R,R\\)* - sorry for that.  But hold on and its gonna be fun.. eventually.\nWhen first using \\(R\\), try this website (in german) or this resource in english.\n\n\n\nDon’t feel sad if things won’t work. Instead, have a look at my 🌟 All-StR 🌟memes:",
     "crumbs": [
       "R,R,R",
       "Rste Schritte"
@@ -75,7 +104,7 @@
     "href": "about.html",
     "title": "The Idea",
     "section": "",
-    "text": "The aim of this site is simple:\nGather up useful information on R, Ecology and Statistics here.\nUse it as a “cheat sheet” or digital garden for basic knowledge.\nYou can help by participating or pointing out mistakes by commenting.",
+    "text": "The aim of this site is simple:\nGather up useful information on R, Ecology and Statistics here.\nUse it as a “cheat sheet” or digital garden for basic knowledge.\nYou can help by participating or pointing out mistakes by commenting.\nIf you want to reach out, contact me using the following options.",
     "crumbs": [
       "The Idea"
     ]
@@ -85,7 +114,7 @@
     "href": "Roadmap.html",
     "title": "Roadmap",
     "section": "",
-    "text": "I’ll just put my initial ideas for further Rticles 😏 here:\n\nAdvanced Basics of \\(R\\) (Loops, Functions, Examples)\nBasic Statistics in \\(R\\) with examples (t-tests, linear models, examples)\nFurther statistics (GLM, GAM, NLS and when to use them)\nStatistical theory (MLE, sum of least squares, normal distribution, equations)\nBaysian Statistics in \\(R\\)\nLiterature recommendations/Further readings for each Rticle\n\nYou can add your ideas down below by commenting.",
+    "text": "I’ll just put my initial ideas for further Rticles 😏 here:\n\nAdvanced Basics of \\(R\\) (Loops, Functions, Examples)\nBasic Statistics in \\(R\\) with examples (t-tests, linear models, examples)\nFurther statistics (GLM, GAM, NLS and when to use them)\nStatistical theory (MLE, sum of least squares, normal distribution, equations)\nBayesian Statistics in \\(R\\)\nLiterature recommendations/Further readings for each Rticle\n\nYou can add your ideas down below by commenting.",
     "crumbs": [
       "Roadmap"
     ]

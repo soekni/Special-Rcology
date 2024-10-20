@@ -21,3 +21,5 @@ Gather up useful information on R, Ecology and Statistics here.
 Use it as a "cheat sheet" or digital garden for basic knowledge.
 
 *You can help* by [participating](/index.qmd) or pointing out mistakes by commenting.
+
+If you want to reach out, contact me using the following options.

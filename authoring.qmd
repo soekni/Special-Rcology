@@ -50,11 +50,3 @@ When you're really in the mood of doing a deep dive into Quarto's possibilities:
 ## FAQ
 
 Please leave a comment when you still need help after looking for the right commands etc. 
-
-<script src="https://utteranc.es/client.js"
-        repo="soekni/Special-Rcology"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>

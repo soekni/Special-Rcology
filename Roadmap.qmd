@@ -1,8 +1,5 @@
 ---
 title: "Roadmap"
-comments: 
-  utterances: 
-    repo: soekni/Special-Rcology
 ---
 
 I'll just put my initial ideas for further *Rticles* 😏 here:
@@ -15,8 +12,9 @@ I'll just put my initial ideas for further *Rticles* 😏 here:
 
 -   Statistical theory (MLE, sum of least squares, normal distribution, equations)
 
--   Baysian Statistics in $R$
+-   Bayesian Statistics in $R$
 
 -   Literature recommendations/Further readings for each *Rticle*
 
 You can add your ideas down below by commenting.
+

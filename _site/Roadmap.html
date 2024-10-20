@@ -188,6 +188,12 @@ window.Quarto = {
  <span class="menu-text">Rste Schritte</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R/approximation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approximation methods in the Bayesian universe</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -226,12 +232,10 @@ window.Quarto = {
 <li><p>Basic Statistics in <span class="math inline">\(R\)</span> with examples (t-tests, linear models, examples)</p></li>
 <li><p>Further statistics (GLM, GAM, NLS and when to use them)</p></li>
 <li><p>Statistical theory (MLE, sum of least squares, normal distribution, equations)</p></li>
-<li><p>Baysian Statistics in <span class="math inline">\(R\)</span></p></li>
+<li><p>Bayesian Statistics in <span class="math inline">\(R\)</span></p></li>
 <li><p>Literature recommendations/Further readings for each <em>Rticle</em></p></li>
 </ul>
 <p>You can add your ideas down below by commenting.</p>
-<script src="https://utteranc.es/client.js" repo="soekni/Special-Rcology" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
-</script>
 
 
 
@@ -472,7 +476,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/7f2eb592-013c-4e8e-904e-60c8dfd334e8\.netlify\.app\/");
+      var filterRegex = new RegExp("https:\/\/soekni\.quarto\.pub\/special-rcology");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

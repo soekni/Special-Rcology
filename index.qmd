@@ -43,12 +43,4 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 You can leave a comment or contact me directly when you're having issues following the setup. Ideally, this should be a "many hands make light work" - kind of thing.
 
-<script src="https://utteranc.es/client.js"
-        repo="soekni/Special-Rcology"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-
 

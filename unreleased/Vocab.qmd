@@ -1,0 +1,28 @@
+---
+title: Vocab of the Statistics Apprentice
+---
+
+Here's an unsorted list of various terms that you're *likely* (oh no, there's the first one!! 😱) to come across. Over time, this list is gonna reviewed and refined. But for now, lets just DO IT!
+
+Non-Bayesian Statistics:
+
+- parameter: the variable you want to investigate with your data/want to predict. Think of it like a blueprint for a model. Given specific values, the parameters describe the process of how ... through the model equation (and its underlying assumptions like linearity or including error terms etc.)  
+
+- Maximum Likelihood Estimate (MLE): Statistical method that aims for finding those values for a given parameter, that makes the observed data (=your dataset) most likely. This method assumes a certain distribution (f.e. a normal distribution).
+
+Example: As you may have seen from the previous meme section, every model is trained on a given data set. This also includes the possibility of the model being unsuitable to predict anything, when the base assumptions are flawed. MLE aims to find the parameter of a model in a way that the probability of the model producing the observed data is maximized. However, the "quality" of this process is linked to the sample size, meaning that ... 
+
+
+Bayesian Statistics:
+
+- prior:
+
+- distribution:
+  - uniform: every possible outcome in a distribution has the same likelihood to occur
+  (Example: A classic dice with 6 sides.) In Bayesian models, assigning a uniform prior is another way of saying "I don't have any reason to believe one outcome is more likely than another, so I’ll treat them all the same."
+
+- posterior: What values for the parameter are probable *after* seeing the data with the assigned prior?
+
+- quadratic approximation (quap): Simplify complex model equations to fit a quadratic shape on the peak (assumption: gaussian distribution of the peak) of the investigated data. 
+
+Trivia: Why is the quap often equivalent to the MLE (given high sample size or uniform prior)? Both focus to approximate the peak of a distribution. Both assume that to be gaussian. A gaussian curve is very similar to a quadratic shape at its peak. When the prior is uniform, no parameter value in the posterior distribution will be favored, resulting in a similar outcome of the approximated peak for the investigated parameter.

@@ -192,6 +192,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Rste Schritte</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R/approximation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approximation methods in the Bayesian universe</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -272,8 +278,6 @@ Important
 <section id="troubleshooting" class="level1">
 <h1>Troubleshooting</h1>
 <p>You can leave a comment or contact me directly when you’re having issues following the setup. Ideally, this should be a “many hands make light work” - kind of thing.</p>
-<script src="https://utteranc.es/client.js" repo="soekni/Special-Rcology" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
-</script>
 
 
 </section>
@@ -515,7 +519,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/soekni\.quarto\.pub\/special-rcology\/");
+      var filterRegex = new RegExp("https:\/\/soekni\.quarto\.pub\/special-rcology");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -842,6 +846,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="soekni/Special-Rcology" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">

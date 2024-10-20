@@ -2,6 +2,9 @@ project:
   type: website
 
 website:
+  comments: 
+    utterances:
+      repo: soekni/Special-Rcology
   title: "Special-Rcology"
   favicon: images/favicon.ico
   page-navigation: true
@@ -32,11 +35,13 @@ website:
         contents:
         - href: R/Rste_Schritte.qmd
           text: Rste Schritte
+        - href: R/approximation.qmd
+          text: Approximation methods in the Bayesian universe
 
 format:
   html:
     theme:
-      light: [minty, custom_light.scss]
+      light: [morph, custom_light.scss]
       dark: [darkly, custom_dark.scss]
     toc: true
 

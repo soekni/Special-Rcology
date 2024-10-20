@@ -2,4 +2,24 @@
 title: "Rste Schritte"
 ---
 
-When first using $R$, try this [website](https://mbrede.github.io/KFN_MethodLab_24/rste_schritte.html) (in german) or this [resource](https://rstudio-education.github.io/hopr/) in english.
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ![](/images/icon2.png){width="450"} | Hey, fellow! Let's waddle our way through the very basics of my favorite program: It's \*$R,R,R$\* - sorry for that. <br> But hold on and its gonna be fun.. eventually.                     |
+|                                     |                                                                                                                                                                                              |
+|                                     | When first using $R$, try this [website](https://mbrede.github.io/KFN_MethodLab_24/rste_schritte.html) (in german) or this [resource](https://rstudio-education.github.io/hopr/) in english. |
++-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Don't feel sad if things won't work. Instead, have a look at my 🌟 All-St*R* 🌟memes:
+
+::: {layout-ncol="1"}
+![](/images/punhub.png){width="400"}
+
+![](/images/scientist.png)
+
+![](/images/usingR.png)
+
+![](/images/torture.png)
+
+![](/images/overfit.jpg){width="400"}
+
+![](/images/why.jpg){width="300"}
+:::
