@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Roadmap – Special-Rcology</title>
+<title>Cheat Sheet – Special-Rcology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./CheatSheet.html" rel="next">
-<link href="./authoring.html" rel="prev">
+<link href="./R/Rste_Schritte.html" rel="next">
+<link href="./Roadmap.html" rel="prev">
 <link href="./images/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -113,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Roadmap.html">Roadmap</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CheatSheet.html">Cheat Sheet</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,13 +169,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Roadmap.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Roadmap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Roadmap</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CheatSheet.html" class="sidebar-item-text sidebar-link">
+  <a href="./CheatSheet.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cheat Sheet</span></a>
   </div>
 </li>
@@ -221,7 +221,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Roadmap</h1>
+<h1 class="title">Cheat Sheet</h1>
 </div>
 
 
@@ -238,16 +238,141 @@ window.Quarto = {
 </header>
 
 
-<p>I’ll just put my initial ideas for further <em>Rticles</em> 😏 here:</p>
-<ul>
-<li><p>Advanced Basics of <span class="math inline">\(R\)</span> (Loops, Functions, Examples)</p></li>
-<li><p>Basic Statistics in <span class="math inline">\(R\)</span> with examples (t-tests, linear models, examples)</p></li>
-<li><p>Further statistics (GLM, GAM, NLS and when to use them)</p></li>
-<li><p>Statistical theory (MLE, sum of least squares, normal distribution, equations)</p></li>
-<li><p>Bayesian Statistics in <span class="math inline">\(R\)</span></p></li>
-<li><p>Literature recommendations/Further readings for each <em>Rticle</em></p></li>
-</ul>
-<p>You can add your ideas down below by commenting.</p>
+<p>The following equations can be copy+pasted from below:</p>
+<pre class="{tex}"><code>**Lab13-SAR (Species-Area-Relationships)**
+$S=c*A^z$
+
+Calculate relative extinction rates:
+$E_{rel}=1-(1-\frac{a}{A})^z$
+
+The number of species reaches an equilibrium when immigration=extinction.
+This means: 
+$\frac{dN}{dt}=I(S) - E(S)$ when $\frac{dN}{dt}=0$ this boils down to $I(S)=E(S)$
+
+For multi habitat SAR:
+$S_i=c_i*\sum_j(h_{ij}*A_j)^z$
+with $S=\sum_{i=1}^mS_i$
+
+**Lab12 - Optimization of Conservational Planning**
+Minimum Cost Problem(?):
+General principle: $MinC=\sum_{i=1}^N_{sites}c_i*x_i$ where
+$x_i$ is the vector including the sites that were selected for protection.
+
+$S_i=\sum_{j=1}^S_{tot}occ(i,j)$ 
+
+Endemism:
+$E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)$
+
+Maximum Coverage Problem:
+In general we want to maximize our return of investment and minimize costs.
+We do this again by $\sum_{i=1}^N_{sites}c_i*x_i &lt;= BUDGET$
+
+$MC=Max\sum_jy_j$ ($y_j$ is the target, f.i. species present: yes or no/ 1 or 0)
+where 
+$y_j=\begin{cases}1 &amp; \text{if } y'_j&gt;0 \\ 0 &amp; \text{if } y'_j=0\end{cases}$ 
+and: &lt;br&gt;
+
+$y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i$
+
+**Lab11- Biodiversity metrics**
+Shannon-Diversity H:
+$H=-\sum_ip_i*log(p_i)$
+with $p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}$ (where $N_i=\frac{N_{tot}}{S}$)
+- also remember that $exp(H)=S$
+
+Shannon-Weaver/evenness(?):
+$J=\frac{H}{log(S)}$
+
+Simpson's diversity Index: 
+$D=\sum_i(\frac{n_i}{N})^2$
+
+Arithmetic mean abundance:
+$AMA= \frac{\sum_{i=1}^Sa_i}{S}$
+
+Geometric Mean Abundance:
+$GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]$
+
+**Lab10-Neutral theory**
+Hubbel equation (abundanced based):
+$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]$
+
+Hubbel equation (with point mutation):
+$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]$ where $P_i=\frac{N_i^n}{J_n}$
+
+**Lab9-FDR (False Discovery Rate)**
+fdr &lt;- c(fdr,p[i] &gt; match(p[i], psort)*alpha/n) #R-Code
+
+else **Metapopulation theory**:
+Mean occupancy $\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}$
+with $\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi$ (c=colonization factor; e=estimator)
+so equilibrium is when $\psi=0$ or $\psi=\frac{c-e}{c}$
+
+Incidence Function by Henski:
+$E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}$
+with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area
+
+$C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j$
+with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence
+
+Diffusion Equation:
+$\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}$
+Reaction diffusion equation (Fisher):
+$\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}$
+remember $\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}$
+
+**Lab8 - Fishery**
+Logistical equation:
+$f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h$
+with h=harvesting; K=Capacity
+$N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}$
+Exact solution:
+$N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t$</code></pre>
+<p><strong>Lab13-SAR (Species-Area-Relationships)</strong> <span class="math inline">\(S=c*A^z\)</span></p>
+<p>Calculate relative extinction rates: <span class="math inline">\(E_{rel}=1-(1-\frac{a}{A})^z\)</span></p>
+<p>The number of species reaches an equilibrium when immigration=extinction. This means: <span class="math inline">\(\frac{dN}{dt}=I(S) - E(S)\)</span> when <span class="math inline">\(\frac{dN}{dt}=0\)</span> this boils down to <span class="math inline">\(I(S)=E(S)\)</span></p>
+<p>For multi habitat SAR: <span class="math inline">\(S_i=c_i*\sum_j(h_{ij}*A_j)^z\)</span> with <span class="math inline">\(S=\sum_{i=1}^mS_i\)</span></p>
+<p><strong>Lab12 - Optimization of Conservational Planning</strong> Minimum Cost Problem(?): General principle: <span class="math inline">\(MinC=\sum_{i=1}^N_{sites}c_i*x_i\)</span> where <span class="math inline">\(x_i\)</span> is the vector including the sites that were selected for protection.</p>
+<p><span class="math inline">\(S_i=\sum_{j=1}^S_{tot}occ(i,j)\)</span></p>
+<p>Endemism: <span class="math inline">\(E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)\)</span></p>
+<p>Maximum Coverage Problem:</p>
+<p>In general we want to maximize our return of investment and minimize costs.</p>
+<p>We do this again by <span class="math inline">\(\sum_{i=1}^N_{sites}c_i*x_i &lt;= BUDGET\)</span></p>
+<p><span class="math inline">\(MC=Max\sum_jy_j\)</span> (<span class="math inline">\(y_j\)</span> is the target, f.i. species present: yes or no/ 1 or 0) where <span class="math inline">\(y_j=\begin{cases}1 &amp; \text{if } y'_j&gt;0 \\ 0 &amp; \text{if } y'_j=0\end{cases}\)</span> and:</p>
+<p><span class="math inline">\(y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i\)</span></p>
+<p><strong>Lab11- Biodiversity metrics</strong></p>
+<p>Shannon-Diversity H: <span class="math inline">\(H=-\sum_ip_i*log(p_i)\)</span></p>
+<p>with <span class="math inline">\(p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}\)</span> (where <span class="math inline">\(N_i=\frac{N_{tot}}{S}\)</span>)</p>
+<p>- also remember that <span class="math inline">\(exp(H)=S\)</span></p>
+<p><strong>Shannon-Weaver/evenness(?):</strong> <span class="math inline">\(J=\frac{H}{log(S)}\)</span></p>
+<p>Simpson’s diversity Index: <span class="math inline">\(D=\sum_i(\frac{n_i}{N})^2\)</span></p>
+<p>Arithmetic mean abundance: <span class="math inline">\(AMA= \frac{\sum_{i=1}^Sa_i}{S}\)</span></p>
+<p>Geometric Mean Abundance: <span class="math inline">\(GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]\)</span></p>
+<p><strong>Lab10-Neutral theory</strong></p>
+<p>Hubbel equation (abundanced based): <span class="math inline">\(Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]\)</span></p>
+<p>Hubbel equation (with point mutation): <span class="math inline">\(Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]\)</span></p>
+<p>where <span class="math inline">\(P_i=\frac{N_i^n}{J_n}\)</span></p>
+<p><strong>Lab9-FDR (False Discovery Rate)</strong></p>
+<p>fdr &lt;- c(fdr,p[i] &gt; match(p[i], psort)*alpha/n) #R-Code</p>
+<p>else <strong>Metapopulation theory</strong>:</p>
+<p>Mean occupancy <span class="math inline">\(\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}\)</span></p>
+<p>with <span class="math inline">\(\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi\)</span> (c=colonization factor; e=estimator)</p>
+<p>so equilibrium is when <span class="math inline">\(\psi=0\)</span> or <span class="math inline">\(\psi=\frac{c-e}{c}\)</span></p>
+<p><strong>Incidence Function</strong> by Henski:</p>
+<p><span class="math inline">\(E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}\)</span></p>
+<p>with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area</p>
+<p><span class="math inline">\(C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j\)</span></p>
+<p>with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence</p>
+<p><strong>Diffusion Equation:</strong></p>
+<p><span class="math inline">\(\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}\)</span></p>
+<p><strong>Reaction diffusion equation</strong> (Fisher):</p>
+<p><span class="math inline">\(\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}\)</span></p>
+<p>remember <span class="math inline">\(\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}\)</span></p>
+<p><strong>Lab8 - Fishery</strong></p>
+<p>Logistical equation:</p>
+<p><span class="math inline">\(f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h\)</span></p>
+<p>with h=harvesting; K=Capacity</p>
+<p><span class="math inline">\(N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}\)</span></p>
+<p>Exact solution: <span class="math inline">\(N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t\)</span></p>
 
 
 
@@ -820,13 +945,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./authoring.html" class="pagination-link" aria-label="Authoring Content">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Authoring Content</span>
+      <a href="./Roadmap.html" class="pagination-link" aria-label="Roadmap">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Roadmap</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./CheatSheet.html" class="pagination-link" aria-label="Cheat Sheet">
-        <span class="nav-page-text">Cheat Sheet</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./R/Rste_Schritte.html" class="pagination-link" aria-label="Rste Schritte">
+        <span class="nav-page-text">Rste Schritte</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -844,7 +969,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/Roadmap.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/Roadmap.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/CheatSheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/CheatSheet.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

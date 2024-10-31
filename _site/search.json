@@ -1,13 +1,84 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Special-Rcology",
+    "objectID": "CheatSheet.html",
+    "href": "CheatSheet.html",
+    "title": "Cheat Sheet",
     "section": "",
-    "text": "🛠️ This is a Quarto website still in development. 🏗️\n\nSetup\nYou can easily contribute via github by following these steps:\n\n“Low key contribution”: Just leave a comment on the article you want to enhance. This is especially wanted for general feedback (structure, content etc.)!\n“I want to add notes myself!”\n\nNo problem! It’s very easy, really. To get started, watch this video for 2 minutes and you’re good to go!\nHere’s a transcript of what to do:\n\n\n\n\n\n\nImportant\n\n\n\n\nCreate a github account here!\nInstall git on your machine.\nGo to the project’s website repository.\nFork it by clicking the button on the top right!\nAfter linking the forked repo to your account, clone/download the files at your desired destination using:\n\ngit clone https://github.com/soekni/Special-Rcology.git\nin your terminal/console.  Make sure to open the terminal at your desired location or change the directory using the “cd locationToYourPath”.\n\n\nNow you’re good to go! Change/Add files/notes using Quarto. Check out this article for learning the basics of markdown to just get started!  If you want to learn more about authoring content/styling, visit the respective site in the navigation bar on the left.\n\n\nFurther reading\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\nTroubleshooting\nYou can leave a comment or contact me directly when you’re having issues following the setup. Ideally, this should be a “many hands make light work” - kind of thing.",
+    "text": "The following equations can be copy+pasted from below:\n**Lab13-SAR (Species-Area-Relationships)**\n$S=c*A^z$\n\nCalculate relative extinction rates:\n$E_{rel}=1-(1-\\frac{a}{A})^z$\n\nThe number of species reaches an equilibrium when immigration=extinction.\nThis means: \n$\\frac{dN}{dt}=I(S) - E(S)$ when $\\frac{dN}{dt}=0$ this boils down to $I(S)=E(S)$\n\nFor multi habitat SAR:\n$S_i=c_i*\\sum_j(h_{ij}*A_j)^z$\nwith $S=\\sum_{i=1}^mS_i$\n\n**Lab12 - Optimization of Conservational Planning**\nMinimum Cost Problem(?):\nGeneral principle: $MinC=\\sum_{i=1}^N_{sites}c_i*x_i$ where\n$x_i$ is the vector including the sites that were selected for protection.\n\n$S_i=\\sum_{j=1}^S_{tot}occ(i,j)$ \n\nEndemism:\n$E_i=\\sum_{j=1}^S_{tot}\\frac{1}{R_j}occ(i,j)$\n\nMaximum Coverage Problem:\nIn general we want to maximize our return of investment and minimize costs.\nWe do this again by $\\sum_{i=1}^N_{sites}c_i*x_i &lt;= BUDGET$\n\n$MC=Max\\sum_jy_j$ ($y_j$ is the target, f.i. species present: yes or no/ 1 or 0)\nwhere \n$y_j=\\begin{cases}1 & \\text{if } y'_j&gt;0 \\\\ 0 & \\text{if } y'_j=0\\end{cases}$ \nand: &lt;br&gt;\n\n$y'_j=\\sum_{i=1}^N_{sites}occ(i,j)*x_i$\n\n**Lab11- Biodiversity metrics**\nShannon-Diversity H:\n$H=-\\sum_ip_i*log(p_i)$\nwith $p_i=\\frac{1}{S}=\\frac{N_i}{N_{tot}}$ (where $N_i=\\frac{N_{tot}}{S}$)\n- also remember that $exp(H)=S$\n\nShannon-Weaver/evenness(?):\n$J=\\frac{H}{log(S)}$\n\nSimpson's diversity Index: \n$D=\\sum_i(\\frac{n_i}{N})^2$\n\nArithmetic mean abundance:\n$AMA= \\frac{\\sum_{i=1}^Sa_i}{S}$\n\nGeometric Mean Abundance:\n$GMA=exp[\\frac{1}{n}\\sum_{i=1}^nlog(a_i)]$\n\n**Lab10-Neutral theory**\nHubbel equation (abundanced based):\n$Pr({N_i+1|N_i})=\\frac{J-N_i}{J}[m\\frac{N_i^M}{J_M}+(1-m)(\\frac{N_i}{J-1})]$\n\nHubbel equation (with point mutation):\n$Pr({N_i+1|N_i})=\\frac{J-N_i}{J}[mP_i+(1-m)(\\frac{N_i}{J-1})]$ where $P_i=\\frac{N_i^n}{J_n}$\n\n**Lab9-FDR (False Discovery Rate)**\nfdr &lt;- c(fdr,p[i] &gt; match(p[i], psort)*alpha/n) #R-Code\n\nelse **Metapopulation theory**:\nMean occupancy $\\psi_t=\\frac{\\sum_{i=1}^Ny_{i,t}{N}$\nwith $\\frac{d\\psi}{dt}=c\\psi(1-\\psi)-e\\psi$ (c=colonization factor; e=estimator)\nso equilibrium is when $\\psi=0$ or $\\psi=\\frac{c-e}{c}$\n\nIncidence Function by Henski:\n$E_i=\\frac{1}{T_E}=\\frac{e}{K_i^x}\\approx\\frac{e}{A_i^x}$\nwith E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area\n\n$C_i=\\frac{M_i^2}{M_i^2+y^2}M_i=\\beta\\sum_{j=1?}^Ne^{-\\alpha d_{i,j}}y_jA_j$\nwith C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence\n\nDiffusion Equation:\n$\\frac{\\partial N}{\\partial t}=\\frac{\\partial ^2N}{\\partial x^2}$\nReaction diffusion equation (Fisher):\n$\\frac{\\partial N}{\\partial t}=rN+\\frac{\\partial ^2N}{\\partial x^2}$\nremember $\\frac{\\partial N}{\\partial t}=\\lim_{\\Delta t\\to\\infty} \\frac{N(t+\\Delta t)-N(t)}{\\Delta t}$\n\n**Lab8 - Fishery**\nLogistical equation:\n$f(N)=\\frac{dN}{dt}=rN(1-\\frac{N}{K})-h$\nwith h=harvesting; K=Capacity\n$N(t)=\\frac{K}{1+(\\frac{K-N_0}{N_0})e^{rt}}$\nExact solution:\n$N(t+\\Delta t)=N(t)+\\frac{dN}{dt}\\Delta t$\nLab13-SAR (Species-Area-Relationships) \\(S=c*A^z\\)\nCalculate relative extinction rates: \\(E_{rel}=1-(1-\\frac{a}{A})^z\\)\nThe number of species reaches an equilibrium when immigration=extinction. This means: \\(\\frac{dN}{dt}=I(S) - E(S)\\) when \\(\\frac{dN}{dt}=0\\) this boils down to \\(I(S)=E(S)\\)\nFor multi habitat SAR: \\(S_i=c_i*\\sum_j(h_{ij}*A_j)^z\\) with \\(S=\\sum_{i=1}^mS_i\\)\nLab12 - Optimization of Conservational Planning Minimum Cost Problem(?): General principle: \\(MinC=\\sum_{i=1}^N_{sites}c_i*x_i\\) where \\(x_i\\) is the vector including the sites that were selected for protection.\n\\(S_i=\\sum_{j=1}^S_{tot}occ(i,j)\\)\nEndemism: \\(E_i=\\sum_{j=1}^S_{tot}\\frac{1}{R_j}occ(i,j)\\)\nMaximum Coverage Problem:\nIn general we want to maximize our return of investment and minimize costs.\nWe do this again by \\(\\sum_{i=1}^N_{sites}c_i*x_i &lt;= BUDGET\\)\n\\(MC=Max\\sum_jy_j\\) (\\(y_j\\) is the target, f.i. species present: yes or no/ 1 or 0) where \\(y_j=\\begin{cases}1 & \\text{if } y'_j&gt;0 \\\\ 0 & \\text{if } y'_j=0\\end{cases}\\) and:\n\\(y'_j=\\sum_{i=1}^N_{sites}occ(i,j)*x_i\\)\nLab11- Biodiversity metrics\nShannon-Diversity H: \\(H=-\\sum_ip_i*log(p_i)\\)\nwith \\(p_i=\\frac{1}{S}=\\frac{N_i}{N_{tot}}\\) (where \\(N_i=\\frac{N_{tot}}{S}\\))\n- also remember that \\(exp(H)=S\\)\nShannon-Weaver/evenness(?): \\(J=\\frac{H}{log(S)}\\)\nSimpson’s diversity Index: \\(D=\\sum_i(\\frac{n_i}{N})^2\\)\nArithmetic mean abundance: \\(AMA= \\frac{\\sum_{i=1}^Sa_i}{S}\\)\nGeometric Mean Abundance: \\(GMA=exp[\\frac{1}{n}\\sum_{i=1}^nlog(a_i)]\\)\nLab10-Neutral theory\nHubbel equation (abundanced based): \\(Pr({N_i+1|N_i})=\\frac{J-N_i}{J}[m\\frac{N_i^M}{J_M}+(1-m)(\\frac{N_i}{J-1})]\\)\nHubbel equation (with point mutation): \\(Pr({N_i+1|N_i})=\\frac{J-N_i}{J}[mP_i+(1-m)(\\frac{N_i}{J-1})]\\)\nwhere \\(P_i=\\frac{N_i^n}{J_n}\\)\nLab9-FDR (False Discovery Rate)\nfdr &lt;- c(fdr,p[i] &gt; match(p[i], psort)*alpha/n) #R-Code\nelse Metapopulation theory:\nMean occupancy \\(\\psi_t=\\frac{\\sum_{i=1}^Ny_{i,t}{N}\\)\nwith \\(\\frac{d\\psi}{dt}=c\\psi(1-\\psi)-e\\psi\\) (c=colonization factor; e=estimator)\nso equilibrium is when \\(\\psi=0\\) or \\(\\psi=\\frac{c-e}{c}\\)\nIncidence Function by Henski:\n\\(E_i=\\frac{1}{T_E}=\\frac{e}{K_i^x}\\approx\\frac{e}{A_i^x}\\)\nwith E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area\n\\(C_i=\\frac{M_i^2}{M_i^2+y^2}M_i=\\beta\\sum_{j=1?}^Ne^{-\\alpha d_{i,j}}y_jA_j\\)\nwith C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence\nDiffusion Equation:\n\\(\\frac{\\partial N}{\\partial t}=\\frac{\\partial ^2N}{\\partial x^2}\\)\nReaction diffusion equation (Fisher):\n\\(\\frac{\\partial N}{\\partial t}=rN+\\frac{\\partial ^2N}{\\partial x^2}\\)\nremember \\(\\frac{\\partial N}{\\partial t}=\\lim_{\\Delta t\\to\\infty} \\frac{N(t+\\Delta t)-N(t)}{\\Delta t}\\)\nLab8 - Fishery\nLogistical equation:\n\\(f(N)=\\frac{dN}{dt}=rN(1-\\frac{N}{K})-h\\)\nwith h=harvesting; K=Capacity\n\\(N(t)=\\frac{K}{1+(\\frac{K-N_0}{N_0})e^{rt}}\\)\nExact solution: \\(N(t+\\Delta t)=N(t)+\\frac{dN}{dt}\\Delta t\\)",
     "crumbs": [
-      "Special-Rcology"
+      "Cheat Sheet"
     ]
+  },
+  {
+    "objectID": "Roadmap.html",
+    "href": "Roadmap.html",
+    "title": "Roadmap",
+    "section": "",
+    "text": "I’ll just put my initial ideas for further Rticles 😏 here:\n\nAdvanced Basics of \\(R\\) (Loops, Functions, Examples)\nBasic Statistics in \\(R\\) with examples (t-tests, linear models, examples)\nFurther statistics (GLM, GAM, NLS and when to use them)\nStatistical theory (MLE, sum of least squares, normal distribution, equations)\nBayesian Statistics in \\(R\\)\nLiterature recommendations/Further readings for each Rticle\n\nYou can add your ideas down below by commenting.",
+    "crumbs": [
+      "Roadmap"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "The Idea",
+    "section": "",
+    "text": "The aim of this site is simple:\nGather up useful information on R, Ecology and Statistics here.\nUse it as a “cheat sheet” or digital garden for basic knowledge.\nYou can help by participating or pointing out mistakes by commenting.\nIf you want to reach out, contact me using the following options.",
+    "crumbs": [
+      "The Idea"
+    ]
+  },
+  {
+    "objectID": "R/Loops.html",
+    "href": "R/Loops.html",
+    "title": "Loops - Falling through time",
+    "section": "",
+    "text": "Yeah, I know. I’d also rather play Looping Louie with you. But here we are.\nSo let’s try make some fun out of it.\nWith each loop, Looping Louie tries to steal your chicken. You fail, you drink.\nHow about a loop in R?\n\n\n\nFirst, clarify the rules and conditions:\n\nwe assume to have 4 virtual players\neach of them starts sober and therefore with the same probability of rescuing their chicken from Louie, \\(p=1\\)\nnow say, each player got a random probability to not react in time, \\(p*\\), which ranges in between 0-0.25\nwith each failure - and therefore: shot - you’re reaction time drops. But we’re no science quacks, so this is the appropriate formula:\n\n\n\\(\\text{Blood Alcohol Concentration BAC}=\\frac{A*5.14}{W*r}​−0.015*T\\)\n\nWhere:\n\nA = Total alcohol consumed in grams (one schnaps ~ 6.3g pure alcohol)\nW = Body weight in pounds (simplify it to be W=150pounds)\nr = Alcohol distribution ratio (0.68 for men, 0.55 for women; for now, lets assume it to be equal at 0.6 for both sex)\nT = Time since drinking began (in hours; one game is around 15 minutes, so T=0.25)\nThe factor 0.015 represents the average rate of alcohol elimination from the body per hour.\n\nSo, in total this means: Assumed each player gets to react once per minute, in total 15 “skill checks” are required per player per game. We still need to assign the punishment for our drunkards. Don’t drink and fly! That’s not an easy decision, so lets just have a look on our plotted BAC-function:\n\nx &lt;- c(1:15)\nt &lt;- c(1:15)\ny &lt;- x*6.3*5.14/(150*0.6)-0.015*t\ndf &lt;- data.frame(x=x, t=t, y=y) #Create a dataframe\n\n#Plot it\nlibrary(ggplot2)\nplot &lt;- ggplot(df, aes(x=x, y=y, t=t)) +\ngeom_line() +\nlabs(title=\"BAC Over Time for Different Number of Drinks\",\nx=\"Number of Drinks (x)\",\ny=\"Blood Alcohol Concentration (BAC)\",\ncolor=\"Time (hours)\") +\ntheme_minimal()\nplot\n\n\n\n\n\n\n\n\nSo, assuming you’d be a complete moron and fail each round, there’s permanent death awaiting you at the end of the game.  After 6-8 shots you should no longer be able to play this game. So, given that prior knowledge, lets adjust our research question: \n“Which of the players are still alive after one game?”  For my part, I’d rather prefer switching to Beerpong, instead..\nTBC",
+    "crumbs": [
+      "R,R,R",
+      "Loops - Falling through time"
+    ]
+  },
+  {
+    "objectID": "R/approximation.html",
+    "href": "R/approximation.html",
+    "title": "Approximation methods in the Bayesian universe",
+    "section": "",
+    "text": "DISCLAIMER: The following examples are taken from Chapter 2 of the book “Statistical Rethinking” by Richard McElreath.\nUsing a prior and a data set, there a three ways of approximating a posterior distribution:",
+    "crumbs": [
+      "R,R,R",
+      "Approximation methods in the Bayesian universe"
+    ]
+  },
+  {
+    "objectID": "R/approximation.html#the-grid-approximation",
+    "href": "R/approximation.html#the-grid-approximation",
+    "title": "Approximation methods in the Bayesian universe",
+    "section": "The grid approximation",
+    "text": "The grid approximation\nSince Bayesian statistics relies on updating the posterior distribution iteratively by looking at the data set and finding a way to fit it to the prior, the grid approximation remains a good way of showcasing this process. (For mathematically complex models - meaning: more parameters - this approach soon becomes unsuitable, though.)\n\nExample: Earth’s coverage of land and water\nLet’s imagine we want to know how much of the earth’s surface is covered by water. We know the exact answer to be ~ 73%, but the model we’re gonna build doesn’t. So this makes a good example of how models only help when properly trained.\nThe model equation itself is based on Bayes Theorem:\nThe theorem tells us how to update our belief about \\(p\\) after observing the data (here \\(W+L\\)), by combining how well \\(p\\) explains the data (the likelihood) with what we already believed about \\(p\\) (the prior), and then normalizing it by the denominator to make sure it forms a valid probability distribution.\nIn this case, the formula is: \\(Pr(p|W,L)=\\frac{Pr(W,L|p)*Pr(p)}{Pr(W,L)}\\) Looks horrifying? Well, maybe. Let’s break down each term:\n\n\\(Pr(p)\\) = our prior belief of what \\(p\\) might be in reality before we see the data.\n\\(Pr(W,L|p)\\) = likelihood (we observe some data and then calculate how likely that data is under different values of \\(p\\)) Think of it as a vector: You generate a vector of probabilities, where each entry corresponds to a different possible value of \\(p\\), and for each \\(p\\), you calculate the likelihood \\(Pr(W,L∣p)*Pr(p)\\). The maximum value out of that vector represents the most probable value of \\(p\\) that aligns the data best with the prior. In order to standardize it, you need to equate the sum of all values, which is \\(Pr(W,L)\\).\n\\(Pr(p)*Pr(W,L|p)\\) = unstandardized posterior\n\nSo in words, the equation would be:\n\\(Posterior\\ distribution = \\frac{\\text{\"Likelihood for each combination of the data * prior\"} \\times \\text{\"Prior probability\"}}{\\text{\"Sum of Likelihoods over all possible values of p\"}}\\)\n\n\nThe Code aka “Theory in Practice”\nNow, we apply it in R to see what all of this means in practice:\n\n#Defining the grid\np_grid &lt;- seq(from=0,to=1, length.out= 20)\n# on each value of the grid (=x), a posterior probability (=y) will be calculated\n\n# Defining the prior\nprior &lt;- rep (1,20) # just repeat \"p=1\" 20 times to create a uniform distribution\n\n#Compute likelihood at each value in grid\nlikelihood &lt;- dbinom(6,size=9, prob=p_grid)#we had 6 water observations out of a sample = 9; calculate the likelihood for each grid step\n\n# Compute product of likelihood and prior\nunstd.posterior &lt;- likelihood * prior\n\n#standardize the posterior, so it sums to 1\nposterior &lt;- unstd.posterior / sum(unstd.posterior)\n\n# Plot it\nplot(p_grid, posterior, type =\"b\",#equals to plot(x,y, \"use bullets, not line)\nxlab=\"probability of water\", ylab=\"posterior probability\")\nmtext(\"20 points\")#assign a simple heading to the plot\n\n\n\n\n\n\n\n\nApplying the uniform distribution here means we’re very cautious in our assumption and want the model to adjust the posterior distribution only to the data its about to see.\nTBC…",
+    "crumbs": [
+      "R,R,R",
+      "Approximation methods in the Bayesian universe"
+    ]
+  },
+  {
+    "objectID": "R/Rste_Schritte.html",
+    "href": "R/Rste_Schritte.html",
+    "title": "Rste Schritte",
+    "section": "",
+    "text": "Hey, fellow! Let’s waddle our way through the very basics of my favorite program: It’s *\\(R,R,R\\)* - sorry for that.  But hold on and its gonna be fun.. eventually.\nWhen first using \\(R\\), try this website (in german) or this resource in english.\n\n\n\nDon’t feel sad if things won’t work. Instead, have a look at my 🌟 All-StR 🌟memes:",
+    "crumbs": [
+      "R,R,R",
+      "Rste Schritte"
+    ]
+  },
+  {
+    "objectID": "unreleased/Vocab.html",
+    "href": "unreleased/Vocab.html",
+    "title": "Vocab of the Statistics Apprentice",
+    "section": "",
+    "text": "Here’s an unsorted list of various terms that you’re likely (oh no, there’s the first one!! 😱) to come across. Over time, this list is gonna reviewed and refined. But for now, lets just DO IT!\nNon-Bayesian Statistics:\n\nparameter: the variable you want to investigate with your data/want to predict. Think of it like a blueprint for a model. Given specific values, the parameters describe the process of how … through the model equation (and its underlying assumptions like linearity or including error terms etc.)\nMaximum Likelihood Estimate (MLE): Statistical method that aims for finding those values for a given parameter, that makes the observed data (=your dataset) most likely. This method assumes a certain distribution (f.e. a normal distribution).\n\nExample: As you may have seen from the previous meme section, every model is trained on a given data set. This also includes the possibility of the model being unsuitable to predict anything, when the base assumptions are flawed. MLE aims to find the parameter of a model in a way that the probability of the model producing the observed data is maximized. However, the “quality” of this process is linked to the sample size, meaning that …\nBayesian Statistics:\n\nprior:\ndistribution:\n\nuniform: every possible outcome in a distribution has the same likelihood to occur (Example: A classic dice with 6 sides.) In Bayesian models, assigning a uniform prior is another way of saying “I don’t have any reason to believe one outcome is more likely than another, so I’ll treat them all the same.”\n\nposterior: What values for the parameter are probable after seeing the data with the assigned prior?\nquadratic approximation (quap): Simplify complex model equations to fit a quadratic shape on the peak (assumption: gaussian distribution of the peak) of the investigated data.\n\nTrivia: Why is the quap often equivalent to the MLE (given high sample size or uniform prior)? Both focus to approximate the peak of a distribution. Both assume that to be gaussian. A gaussian curve is very similar to a quadratic shape at its peak. When the prior is uniform, no parameter value in the posterior distribution will be favored, resulting in a similar outcome of the approximated peak for the investigated parameter."
   },
   {
     "objectID": "authoring.html",
@@ -60,74 +131,13 @@
     ]
   },
   {
-    "objectID": "unreleased/Vocab.html",
-    "href": "unreleased/Vocab.html",
-    "title": "Vocab of the Statistics Apprentice",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Special-Rcology",
     "section": "",
-    "text": "Here’s an unsorted list of various terms that you’re likely (oh no, there’s the first one!! 😱) to come across. Over time, this list is gonna reviewed and refined. But for now, lets just DO IT!\nNon-Bayesian Statistics:\n\nparameter: the variable you want to investigate with your data/want to predict. Think of it like a blueprint for a model. Given specific values, the parameters describe the process of how … through the model equation (and its underlying assumptions like linearity or including error terms etc.)\nMaximum Likelihood Estimate (MLE): Statistical method that aims for finding those values for a given parameter, that makes the observed data (=your dataset) most likely. This method assumes a certain distribution (f.e. a normal distribution).\n\nExample: As you may have seen from the previous meme section, every model is trained on a given data set. This also includes the possibility of the model being unsuitable to predict anything, when the base assumptions are flawed. MLE aims to find the parameter of a model in a way that the probability of the model producing the observed data is maximized. However, the “quality” of this process is linked to the sample size, meaning that …\nBayesian Statistics:\n\nprior:\ndistribution:\n\nuniform: every possible outcome in a distribution has the same likelihood to occur (Example: A classic dice with 6 sides.) In Bayesian models, assigning a uniform prior is another way of saying “I don’t have any reason to believe one outcome is more likely than another, so I’ll treat them all the same.”\n\nposterior: What values for the parameter are probable after seeing the data with the assigned prior?\nquadratic approximation (quap): Simplify complex model equations to fit a quadratic shape on the peak (assumption: gaussian distribution of the peak) of the investigated data.\n\nTrivia: Why is the quap often equivalent to the MLE (given high sample size or uniform prior)? Both focus to approximate the peak of a distribution. Both assume that to be gaussian. A gaussian curve is very similar to a quadratic shape at its peak. When the prior is uniform, no parameter value in the posterior distribution will be favored, resulting in a similar outcome of the approximated peak for the investigated parameter."
-  },
-  {
-    "objectID": "R/Rste_Schritte.html",
-    "href": "R/Rste_Schritte.html",
-    "title": "Rste Schritte",
-    "section": "",
-    "text": "Hey, fellow! Let’s waddle our way through the very basics of my favorite program: It’s *\\(R,R,R\\)* - sorry for that.  But hold on and its gonna be fun.. eventually.\nWhen first using \\(R\\), try this website (in german) or this resource in english.\n\n\n\nDon’t feel sad if things won’t work. Instead, have a look at my 🌟 All-StR 🌟memes:",
+    "text": "🛠️ This is a Quarto website still in development. 🏗️\n\nSetup\nYou can easily contribute via github by following these steps:\n\n“Low key contribution”: Just leave a comment on the article you want to enhance. This is especially wanted for general feedback (structure, content etc.)!\n“I want to add notes myself!”\n\nNo problem! It’s very easy, really. To get started, watch this video for 2 minutes and you’re good to go!\nHere’s a transcript of what to do:\n\n\n\n\n\n\nImportant\n\n\n\n\nCreate a github account here!\nInstall git on your machine.\nGo to the project’s website repository.\nFork it by clicking the button on the top right!\nAfter linking the forked repo to your account, clone/download the files at your desired destination using:\n\ngit clone https://github.com/soekni/Special-Rcology.git\nin your terminal/console.  Make sure to open the terminal at your desired location or change the directory using the “cd locationToYourPath”.\n\n\nNow you’re good to go! Change/Add files/notes using Quarto. Check out this article for learning the basics of markdown to just get started!  If you want to learn more about authoring content/styling, visit the respective site in the navigation bar on the left.\n\n\nFurther reading\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\nTroubleshooting\nYou can leave a comment or contact me directly when you’re having issues following the setup. Ideally, this should be a “many hands make light work” - kind of thing.",
     "crumbs": [
-      "R,R,R",
-      "Rste Schritte"
-    ]
-  },
-  {
-    "objectID": "R/approximation.html",
-    "href": "R/approximation.html",
-    "title": "Approximation methods in the Bayesian universe",
-    "section": "",
-    "text": "DISCLAIMER: The following examples are taken from Chapter 2 of the book “Statistical Rethinking” by Richard McElreath.\nUsing a prior and a data set, there a three ways of approximating a posterior distribution:",
-    "crumbs": [
-      "R,R,R",
-      "Approximation methods in the Bayesian universe"
-    ]
-  },
-  {
-    "objectID": "R/approximation.html#the-grid-approximation",
-    "href": "R/approximation.html#the-grid-approximation",
-    "title": "Approximation methods in the Bayesian universe",
-    "section": "The grid approximation",
-    "text": "The grid approximation\nSince Bayesian statistics relies on updating the posterior distribution iteratively by looking at the data set and finding a way to fit it to the prior, the grid approximation remains a good way of showcasing this process. (For mathematically complex models - meaning: more parameters - this approach soon becomes unsuitable, though.)\n\nExample: Earth’s coverage of land and water\nLet’s imagine we want to know how much of the earth’s surface is covered by water. We know the exact answer to be ~ 73%, but the model we’re gonna build doesn’t. So this makes a good example of how models only help when properly trained.\nThe model equation itself is based on Bayes Theorem:\nThe theorem tells us how to update our belief about \\(p\\) after observing the data (here \\(W+L\\)), by combining how well \\(p\\) explains the data (the likelihood) with what we already believed about \\(p\\) (the prior), and then normalizing it by the denominator to make sure it forms a valid probability distribution.\nIn this case, the formula is: \\(Pr(p|W,L)=\\frac{Pr(W,L|p)*Pr(p)}{Pr(W,L)}\\) Looks horrifying? Well, maybe. Let’s break down each term:\n\n\\(Pr(p)\\) = our prior belief of what \\(p\\) might be in reality before we see the data.\n\\(Pr(W,L|p)\\) = likelihood (we observe some data and then calculate how likely that data is under different values of \\(p\\)) Think of it as a vector: You generate a vector of probabilities, where each entry corresponds to a different possible value of \\(p\\), and for each \\(p\\), you calculate the likelihood \\(Pr(W,L∣p)*Pr(p)\\). The maximum value out of that vector represents the most probable value of \\(p\\) that aligns the data best with the prior. In order to standardize it, you need to equate the sum of all values, which is \\(Pr(W,L)\\).\n\\(Pr(p)*Pr(W,L|p)\\) = unstandardized posterior\n\nSo in words, the equation would be:\n\\(Posterior\\ distribution = \\frac{\\text{\"Likelihood for each combination of the data * prior\"} \\times \\text{\"Prior probability\"}}{\\text{\"Sum of Likelihoods over all possible values of p\"}}\\)\n\n\nThe Code aka “Theory in Practice”\nNow, we apply it in R to see what all of this means in practice:\n\n#Defining the grid\np_grid &lt;- seq(from=0,to=1, length.out= 20)\n# on each value of the grid (=x), a posterior probability (=y) will be calculated\n\n# Defining the prior\nprior &lt;- rep (1,20) # just repeat \"p=1\" 20 times to create a uniform distribution\n\n#Compute likelihood at each value in grid\nlikelihood &lt;- dbinom(6,size=9, prob=p_grid)#we had 6 water observations out of a sample = 9; calculate the likelihood for each grid step\n\n# Compute product of likelihood and prior\nunstd.posterior &lt;- likelihood * prior\n\n#standardize the posterior, so it sums to 1\nposterior &lt;- unstd.posterior / sum(unstd.posterior)\n\n# Plot it\nplot(p_grid, posterior, type =\"b\",#equals to plot(x,y, \"use bullets, not line)\nxlab=\"probability of water\", ylab=\"posterior probability\")\nmtext(\"20 points\")#assign a simple heading to the plot\n\n\n\n\n\n\n\n\nApplying the uniform distribution here means we’re very cautious in our assumption and want the model to adjust the posterior distribution only to the data its about to see.\nTBC…",
-    "crumbs": [
-      "R,R,R",
-      "Approximation methods in the Bayesian universe"
-    ]
-  },
-  {
-    "objectID": "R/Loops.html",
-    "href": "R/Loops.html",
-    "title": "Loops - Falling through time",
-    "section": "",
-    "text": "Yeah, I know. I’d also rather play Looping Louie with you. But here we are.\nSo let’s try make some fun out of it.\nWith each loop, Looping Louie tries to steal your chicken. You fail, you drink.\nHow about a loop in R?\n\n\n\nFirst, clarify the rules and conditions:\n\nwe assume to have 4 virtual players\neach of them starts sober and therefore with the same probability of rescuing their chicken from Louie, \\(p=1\\)\nnow say, each player got a random probability to not react in time, \\(p*\\), which ranges in between 0-0.25\nwith each failure - and therefore: shot - you’re reaction time drops. But we’re no science quacks, so this is the appropriate formula:\n\n\n\\(\\text{Blood Alcohol Concentration BAC}=\\frac{A*5.14}{W*r}​−0.015*T\\)\n\nWhere:\n\nA = Total alcohol consumed in grams (one schnaps ~ 6.3g pure alcohol)\nW = Body weight in pounds (simplify it to be W=150pounds)\nr = Alcohol distribution ratio (0.68 for men, 0.55 for women; for now, lets assume it to be equal at 0.6 for both sex)\nT = Time since drinking began (in hours; one game is around 15 minutes, so T=0.25)\nThe factor 0.015 represents the average rate of alcohol elimination from the body per hour.\n\nSo, in total this means: Assumed each player gets to react once per minute, in total 15 “skill checks” are required per player per game. We still need to assign the punishment for our drunkards. Don’t drink and fly! That’s not an easy decision, so lets just have a look on our plotted BAC-function:\n\nx &lt;- c(1:15)\nt &lt;- c(1:15)\ny &lt;- x*6.3*5.14/(150*0.6)-0.015*t\ndf &lt;- data.frame(x=x, t=t, y=y) #Create a dataframe\n\n#Plot it\nlibrary(ggplot2)\nplot &lt;- ggplot(df, aes(x=x, y=y, t=t)) +\ngeom_line() +\nlabs(title=\"BAC Over Time for Different Number of Drinks\",\nx=\"Number of Drinks (x)\",\ny=\"Blood Alcohol Concentration (BAC)\",\ncolor=\"Time (hours)\") +\ntheme_minimal()\nplot\n\n\n\n\n\n\n\n\nSo, assuming you’d be a complete moron and fail each round, there’s permanent death awaiting you at the end of the game.  After 6-8 shots you should no longer be able to play this game. So, given that prior knowledge, lets adjust our research question: \n“Which of the players are still alive after one game?”  For my part, I’d rather prefer switching to Beerpong, instead..\nTBC",
-    "crumbs": [
-      "R,R,R",
-      "Loops - Falling through time"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "The Idea",
-    "section": "",
-    "text": "The aim of this site is simple:\nGather up useful information on R, Ecology and Statistics here.\nUse it as a “cheat sheet” or digital garden for basic knowledge.\nYou can help by participating or pointing out mistakes by commenting.\nIf you want to reach out, contact me using the following options.",
-    "crumbs": [
-      "The Idea"
-    ]
-  },
-  {
-    "objectID": "Roadmap.html",
-    "href": "Roadmap.html",
-    "title": "Roadmap",
-    "section": "",
-    "text": "I’ll just put my initial ideas for further Rticles 😏 here:\n\nAdvanced Basics of \\(R\\) (Loops, Functions, Examples)\nBasic Statistics in \\(R\\) with examples (t-tests, linear models, examples)\nFurther statistics (GLM, GAM, NLS and when to use them)\nStatistical theory (MLE, sum of least squares, normal distribution, equations)\nBayesian Statistics in \\(R\\)\nLiterature recommendations/Further readings for each Rticle\n\nYou can add your ideas down below by commenting.",
-    "crumbs": [
-      "Roadmap"
+      "Special-Rcology"
     ]
   }
 ]

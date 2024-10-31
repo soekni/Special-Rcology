@@ -1,0 +1,188 @@
+---
+title: Cheat Sheet
+---
+
+The following equations can be copy+pasted from below:
+
+```{tex}
+**Lab13-SAR (Species-Area-Relationships)**
+$S=c*A^z$
+
+Calculate relative extinction rates:
+$E_{rel}=1-(1-\frac{a}{A})^z$
+
+The number of species reaches an equilibrium when immigration=extinction.
+This means: 
+$\frac{dN}{dt}=I(S) - E(S)$ when $\frac{dN}{dt}=0$ this boils down to $I(S)=E(S)$
+
+For multi habitat SAR:
+$S_i=c_i*\sum_j(h_{ij}*A_j)^z$
+with $S=\sum_{i=1}^mS_i$
+
+**Lab12 - Optimization of Conservational Planning**
+Minimum Cost Problem(?):
+General principle: $MinC=\sum_{i=1}^N_{sites}c_i*x_i$ where
+$x_i$ is the vector including the sites that were selected for protection.
+
+$S_i=\sum_{j=1}^S_{tot}occ(i,j)$ 
+
+Endemism:
+$E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)$
+
+Maximum Coverage Problem:
+In general we want to maximize our return of investment and minimize costs.
+We do this again by $\sum_{i=1}^N_{sites}c_i*x_i <= BUDGET$
+
+$MC=Max\sum_jy_j$ ($y_j$ is the target, f.i. species present: yes or no/ 1 or 0)
+where 
+$y_j=\begin{cases}1 & \text{if } y'_j>0 \\ 0 & \text{if } y'_j=0\end{cases}$ 
+and: <br>
+
+$y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i$
+
+**Lab11- Biodiversity metrics**
+Shannon-Diversity H:
+$H=-\sum_ip_i*log(p_i)$
+with $p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}$ (where $N_i=\frac{N_{tot}}{S}$)
+- also remember that $exp(H)=S$
+
+Shannon-Weaver/evenness(?):
+$J=\frac{H}{log(S)}$
+
+Simpson's diversity Index: 
+$D=\sum_i(\frac{n_i}{N})^2$
+
+Arithmetic mean abundance:
+$AMA= \frac{\sum_{i=1}^Sa_i}{S}$
+
+Geometric Mean Abundance:
+$GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]$
+
+**Lab10-Neutral theory**
+Hubbel equation (abundanced based):
+$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]$
+
+Hubbel equation (with point mutation):
+$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]$ where $P_i=\frac{N_i^n}{J_n}$
+
+**Lab9-FDR (False Discovery Rate)**
+fdr <- c(fdr,p[i] > match(p[i], psort)*alpha/n) #R-Code
+
+else **Metapopulation theory**:
+Mean occupancy $\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}$
+with $\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi$ (c=colonization factor; e=estimator)
+so equilibrium is when $\psi=0$ or $\psi=\frac{c-e}{c}$
+
+Incidence Function by Henski:
+$E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}$
+with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area
+
+$C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j$
+with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence
+
+Diffusion Equation:
+$\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}$
+Reaction diffusion equation (Fisher):
+$\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}$
+remember $\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}$
+
+**Lab8 - Fishery**
+Logistical equation:
+$f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h$
+with h=harvesting; K=Capacity
+$N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}$
+Exact solution:
+$N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t$
+```
+
+**Lab13-SAR (Species-Area-Relationships)** $S=c*A^z$
+
+Calculate relative extinction rates: $E_{rel}=1-(1-\frac{a}{A})^z$
+
+The number of species reaches an equilibrium when immigration=extinction. This means: $\frac{dN}{dt}=I(S) - E(S)$ when $\frac{dN}{dt}=0$ this boils down to $I(S)=E(S)$
+
+For multi habitat SAR: $S_i=c_i*\sum_j(h_{ij}*A_j)^z$ with $S=\sum_{i=1}^mS_i$
+
+**Lab12 - Optimization of Conservational Planning** Minimum Cost Problem(?): General principle: $MinC=\sum_{i=1}^N_{sites}c_i*x_i$ where $x_i$ is the vector including the sites that were selected for protection.
+
+$S_i=\sum_{j=1}^S_{tot}occ(i,j)$
+
+Endemism: $E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)$
+
+Maximum Coverage Problem:
+
+In general we want to maximize our return of investment and minimize costs.
+
+We do this again by $\sum_{i=1}^N_{sites}c_i*x_i <= BUDGET$
+
+$MC=Max\sum_jy_j$ ($y_j$ is the target, f.i. species present: yes or no/ 1 or 0) where $y_j=\begin{cases}1 & \text{if } y'_j>0 \\ 0 & \text{if } y'_j=0\end{cases}$ and:
+
+$y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i$
+
+**Lab11- Biodiversity metrics**
+
+Shannon-Diversity H: $H=-\sum_ip_i*log(p_i)$
+
+with $p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}$ (where $N_i=\frac{N_{tot}}{S}$)
+
+\- also remember that $exp(H)=S$
+
+**Shannon-Weaver/evenness(?):** $J=\frac{H}{log(S)}$
+
+Simpson's diversity Index: $D=\sum_i(\frac{n_i}{N})^2$
+
+Arithmetic mean abundance: $AMA= \frac{\sum_{i=1}^Sa_i}{S}$
+
+Geometric Mean Abundance: $GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]$
+
+**Lab10-Neutral theory**
+
+Hubbel equation (abundanced based): $Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]$
+
+Hubbel equation (with point mutation): $Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]$
+
+where $P_i=\frac{N_i^n}{J_n}$
+
+**Lab9-FDR (False Discovery Rate)**
+
+fdr \<- c(fdr,p\[i\] \> match(p\[i\], psort)\*alpha/n) #R-Code
+
+else **Metapopulation theory**:
+
+Mean occupancy $\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}$
+
+with $\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi$ (c=colonization factor; e=estimator)
+
+so equilibrium is when $\psi=0$ or $\psi=\frac{c-e}{c}$
+
+**Incidence Function** by Henski:
+
+$E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}$
+
+with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area
+
+$C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j$
+
+with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence
+
+**Diffusion Equation:**
+
+$\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}$
+
+**Reaction diffusion equation** (Fisher):
+
+$\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}$
+
+remember $\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}$
+
+**Lab8 - Fishery**
+
+Logistical equation:
+
+$f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h$
+
+with h=harvesting; K=Capacity
+
+$N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}$
+
+Exact solution: $N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t$

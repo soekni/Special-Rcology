@@ -31,6 +31,8 @@ website:
         text: Authoring Content
       - href: Roadmap.qmd
         text: Roadmap
+      - href: CheatSheet.qmd
+        text: Cheat Sheet
       - section: R,R,R
         contents:
         - href: R/Rste_Schritte.qmd
