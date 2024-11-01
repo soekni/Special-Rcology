@@ -2,187 +2,832 @@
 title: Cheat Sheet
 ---
 
-The following equations can be copy+pasted from below:
+## How to use
 
-```{tex}
-**Lab13-SAR (Species-Area-Relationships)**
-$S=c*A^z$
+The following equations can be copy+pasted from below (**right click** on equation)!:
 
-Calculate relative extinction rates:
-$E_{rel}=1-(1-\frac{a}{A})^z$
+### Lab 1 - Climate spaces
 
-The number of species reaches an equilibrium when immigration=extinction.
-This means: 
-$\frac{dN}{dt}=I(S) - E(S)$ when $\frac{dN}{dt}=0$ this boils down to $I(S)=E(S)$
+Climate space of an ectotherm
 
-For multi habitat SAR:
-$S_i=c_i*\sum_j(h_{ij}*A_j)^z$
-with $S=\sum_{i=1}^mS_i$
+$$
+f = q\ –h*(b - a)
+$$
 
-**Lab12 - Optimization of Conservational Planning**
-Minimum Cost Problem(?):
-General principle: $MinC=\sum_{i=1}^N_{sites}c_i*x_i$ where
-$x_i$ is the vector including the sites that were selected for protection.
+-   $q$ = solar radiation (cal/h)
 
-$S_i=\sum_{j=1}^S_{tot}occ(i,j)$ 
+-   $h*(b - a)$ = heat loss through convection
+
+-   $b$ = body temperature of the animal (ºC)
+
+-   $a$ = air temperature (ºC)
+
+-   $h$ = convection heat transfer coefficient (cal/h/ ºC)
+
+Equilibrium body temperature at:
+
+$$
+b^* = \frac{q}{h}+a
+$$
+
+=\> if solar radiation = 0, =\> body temperature same as air temperature
+
+Climate space equation:
+
+$$
+a_{max, min} = b_{max, min} - \frac{q}{h}
+$$
+
+### Lab 2 - Optimal foraging
+
+#### Searching predator
+
+Only feeding on 1 or only feeding on 2: $$
+\left( \frac{E}{T} \right)_{S_i} = \frac{e_i - ew \cdot \left( \dfrac{1}{a_i} \right) - eh \cdot h_i}{\left( \dfrac{1}{a_i} \right) + h_i} \quad \text{for } i = 1, 2
+$$
+
+Feeding on both: $$
+\left( \frac{E}{T} \right)_{S_3} = \frac{ \displaystyle \left( \dfrac{ a_1 e_1 + a_2 e_2 }{ a_1 + a_2 } \right) - e_w \cdot \left( \dfrac{1}{ a_1 + a_2 } \right) - e_h \cdot \left( \dfrac{ a_1 h_1 + a_2 h_2 }{ a_1 + a_2 } \right) }{ \displaystyle \left( \dfrac{1}{ a_1 + a_2 } \right) + \left( \dfrac{ a_1 h_1 + a_2 h_2 }{ a_1 + a_2 } \right) } 
+$$
+
+-   $a_i$ be the point abundance per unit of time of prey type i \[ind/s\]
+
+-   $e_i$ be the caloric content of prey type i \[J\]
+
+-   $h_i$ be the time it takes to consume prey type i \[s\]
+
+-   $e_w$ is the energy expended per unit of time by the predator while searching for prey \[J/s\]
+
+-   $e_h$ is the energy expended per unit of time by the predator to ingest prey \[J/s\]
+
+-   Weighted mean of energy per prey - energy spent while waiting - energy spent while handling
+
+The critical point, where the best strategy switches, can be defined as: $$
+a_{1_{switch}} = \frac{e_2 + (e_w - e_h) \cdot h_2}{e_1 \cdot h_2 - e_2 \cdot h_1} 
+$$
+
+=\> critical point only depends on most interesting prey abundance
+
+Best prey:
+
+$$
+\frac{e_1}{h_1} > \frac{e_2}{h_2}
+$$
+
+#### Sit and wait predator
+
+$$
+t_p = \frac{4}{3} \cdot \frac{r_c}{v} \quad \text{(average time spent pursuing)}
+$$
+
+$$
+t_w = \frac{2}{\pi \cdot r_c^2 \cdot a} \quad \text{(average time spent waiting)}
+$$ With:
+
+-   $r_c$ = cutoff radius \[m\]
+
+-   $a$ = prey abundance \[#/s\*m²\]
+
+-   $v$ = speed of predator \[m/s\]
+
+-   $e_w$ = energy expended by predator per unit of time waiting \[J/s\]
+
+-   $t_w$ = time spent waiting for prey \[s\]
+
+-   $e_p$ = energy spent pursuing the prey per unit time \[J/s\]
+
+-   $t_p$ = time spent pursuing the prey \[s\]
+
+-   $e_i$ = time per item
+
+$$
+\frac{E}{T} = \frac{e_i - e_w * t_w - e_p * t_p}{t_w + t_p} \quad \text{(energy intake rate)}
+$$
+
+Follows a parapola relationship with optimal value depending on:
+
+-   prey abundance =\> higher =\> lower rc
+
+-   energy of prey =\> higher =\> higher rc
+
+### Lab 3 - Evolutionary games
+
+#### Nash equilibrium:
+
+$$ 
+E(S^*, S^*) \geq E(S_i, S^*)  \quad \text{for any strategy Si}
+$$
+
+With:
+
+-   $E$ = expected payoff
+
+-   $S$ = strategy
+
+Condition when is same (invade population when rare):
+
+$$
+E(S^*, S_i) > E(S_i, S_i)
+$$
+
+ESS or Nash equilibrium has to be best response to itself. No player has an incentive to unilaterally change their strategy
+
+When does cooperation evolve:
+
+-   Kin selection theory by William D. Hamilton
+
+#### Hawk dove game:
+
+Payoff matrix:
+
+|          | Hawk                   | Dove                  |
+|----------|------------------------|-----------------------|
+| **Hawk** | $\frac{V - C_{HH}}{2}$ | V                     |
+| **Dove** | 0                      | $\frac{1}{2}V-C_{DD}$ |
+
+-   $V$ = value of resource
+
+-   $CHH$ = cost of conflict with other hawk
+
+-   $CDD$ = cost of sharing the resource
+
+=\> no strategy best against itself =\> H can invade D population, D can invade H population =\> no simple ESS
+
+Mixed strategies with p = probability of being hawk:
+
+$$
+   E(\text{Hawk}) = p \cdot \frac{V - C_{HH}}{2} + (1 - p) \cdot V
+$$
+
+$$
+   E(\text{Dove}) = p \cdot 0 + (1 - p) \cdot \frac{V-C_{DD}}{2}
+$$
+
+For mixed strategy ESS:
+
+$$
+   p \cdot \frac{V - C_{HH}}{2} + (1 - p) \cdot V = (1 - p) \cdot \frac{V - C_{DD}}{2}
+$$
+
+$$
+   p = \frac{V - C_{DD}}{V + C_{HH} - C_{DD}}
+$$
+
+Example with numbers:
+
+|   | Hawk | Dove |
+|----|----|----|
+| **Hawk** | $\frac{1}{2}*50 + \frac{1}{2}*-100 = -25$ | 50 |
+| **Dove** | 0 | $\frac{1}{2}*(50-20) = 15$ |
+
+$$
+E(\text{Hawk}) = p \cdot \frac{50 - 100}{2} + (1 - p) \cdot 50
+$$
+
+$$
+E(\text{Dove}) = (1 - p) \cdot \frac{50 - 20}{2}
+$$
+
+$$
+   p = \frac{35}{60} = \frac{7}{12} \approx 0.583
+$$
+
+#### War of attrition:
+
+Continuous game, stochastic solution, waiting times distributed like:
+
+$$
+f(T^*) = \frac{1}{V} e^{-T/V}
+$$
+
+With:
+
+-   $V$ = value of resource
+
+-   $T$ = waiting time each player is willing to invest
+
+-   $f(T)$ = probability density function of waiting times
+
+### Lab 4 - Random walk
+
+#### Distribution at x, y scale:
+
+Diffusion equation: $$
+\frac{\partial v}{\partial t} = D \frac{\partial^2 v}{\partial x^2}
+$$
+
+Diffusion equation solution - two dimensional Gaussian distribution: $$
+n(x, y, t) = \frac{n_0}{4 \pi D t} * \exp\left( -\frac{x^2 + y^2}{4 D t} \right) 
+$$
+
+-   $t$ = n of time steps
+
+-   $D$ = step length
+
+#### Distribution of distances:
+
+Rayleigh distribution, transformation of x and y values as: $$
+r = \sqrt{x^2 + y^2}
+$$
+
+=\> distribution of distances:
+
+$$
+n(r|t) = \frac{n_0}{4 \pi D t} \exp\left(-\frac{r^2}{4 D t}\right)
+$$
+
+Distances scales with sqrt(t), is expected value of r with respect to t: $$
+\bar{r} = \sqrt{\pi * D * t}
+$$
+
+### Lab 5 - Population dynamics
+
+Derivation of exponential growth formula:
+
+$$
+N_{t+1} = N_t + B_t - D_t 
+$$
+
+$$
+\quad with \quad B_t, D_t \propto N_t 
+$$
+
+$$
+B_t = b * N_t \quad and \quad D_t = d * N_t 
+$$
+
+$$
+N_{t+1} = (1 + b - d) * N_t = R * N_t 
+$$
+
+Discrete time solution (geometric growth): $$
+N_t = N_0 \cdot R^t
+$$
+
+Continuous time solution (exponential growth):
+
+$$
+\frac{dN}{dt} = r N \quad solution:
+$$
+
+$$
+N(t) = N_0 \cdot e^{rt}
+$$
+
+#### Relationship $r$ and $R$:
+
+-   $r$ is the **intrinsic rate of increase** of **continuous-time models**
+
+-   $R$ is the **finite rate of increase**, representing the growth factor in **discrete-time models**
+
+$$
+R = e^r 
+$$
+
+$$
+r = \ln(R)
+$$
+
+-   When $r = 0$ , then $R = e^0 = 1$, which corresponds to no change in population size.
+
+-   When $r > 0$, $R > 1$, indicating growth. - When $r < 0$, $0 < R < 1$, indicating decline.
+
+$R_0$ is basic reproductive rate, indicating the average number of offspring per individual per generation: $$
+R_0 = R^\tau
+$$
+
+-   $\tau$ = generation time/infectious period
+
+### Lab 6 - Population dynamics and stochasticity
+
+**Demographic stochasticity:**
+
+-   Internal differences of individuals (age, health, genetic traits)
+-   Population size dependence =\> larger impact in small populations
+
+$$
+SE = \frac{\sigma}{\sqrt{n}}
+$$
+
+#### Environmental stochasticity:
+
+-   External environmental variations
+
+-   Climate, resources, disasters
+
+-   Affects all individuals similarly, independent of population size
+
+#### Time to extinction, Foley model:
+
+$$
+T_e=\frac{1}{s r}[e^{s \log(k)}(1-e^{-s \log(N_0)} )-s \log(N_0)]
+$$
+
+$$
+with \quad s = \frac{2r_d}{v} 
+$$
+
+$$
+and \quad \bar{r}_d \sim Normal(r_d, v) 
+$$
+
+-   $r_d$ = exponential growth rate with mean: $\bar{r}=\log(\bar{R})$
+
+-   $v$ = variance of growth rate
+
+-   $N_0$ = initial population size
+
+-   $K$ = carrying capacity of habitat
+
+    Results:
+
+-   $T_E$ increase with $N_0$ increase
+
+-   $T_E$ increase with $r$ increase
+
+-   $T_E$ decrease with $v$ increase
+
+-   $T_E$ increase with $K$ increase
+
+#### Central limit theorem
+
+$$
+\sum_{i = 1}^{n}\frac{x_i}{n} = \bar{x} \sim Normal\left( \mu, \frac{\sigma^2}{n}\right) 
+$$
+
+### Lab 7 - Occupancy model
+
+#### Maximum likelihood vs. bayesian:
+
+MLE:
+
+$$
+\mathcal{L}(data | hypothesis) = \mathcal{L}(x|\theta) \quad MLE 
+$$
+with
+$$
+{\theta} = \arg \max_{\theta} \prod_{i=1}^n f(x_i \mid \theta)
+$$
+
+$$
+P(\theta|x) = \frac{P(x|\theta) * P (\theta)}{P(x)} \quad Bayes
+$$
+
+$$
+P(x) = \int P(x|\theta)P(\theta) d\theta \quad or \quad P(x) = P(x|\theta)P(\theta) + P(x|not_\theta) * P(not_\theta)
+$$
+
+-   Priors in bayesian statistics
+
+-   Posterior distribution
+
+#### Bernoulli & binomial likelihood:
+
+$$
+P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in {0, 1} \quad Bernoulli
+$$
+
+$$
+L(p) = P(X = 00011) = (1 - p) \cdot (1 - p) \cdot (1 - p) \cdot p \cdot p = (1 - p)^3 p^2 
+$$
+
+$$
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, 2, \ldots, n \quad Binomial 
+$$
+
+$$
+L(p) = P(X = 2) = \binom{5}{2} p^2 (1 - p)^3
+$$
+
+#### Occupancy model with detection probability:
+
+with:
+
+-   detection probability $p$
+
+-   occupancy probability $\psi$
+
+Probability of one detection/non detection:
+
+$$
+P(y = 1) = \psi * p
+$$
+
+$$
+P(y = 0) = \psi * (1-p) + (1-\psi)
+$$
+
+Probability for several detections:
+
+$$
+L(\psi, p \mid \mathbf{y}) = \prod_{i=1}^n \left[ \psi \cdot \prod_{j=1}^{J_i} p^{y_{ij}} (1 - p)^{1 - y_{ij}} + (1 - \psi) \cdot \mathbb{I}\left( \sum_{j=1}^{J_i} y_{ij} = 0 \right) \right]
+$$
+
+with:
+
+-   $i$ = site
+
+-   $n$ total number of sites
+
+-   $j$ = day
+
+-   $J_i$ = total number of days at site $i$
+
+$$
+\mathbb{I}(A) = 
+\begin{cases} 
+1, & \text{if } A \text{ is true}, \\
+0, & \text{if } A \text{ is false}.
+\end{cases}$$
+
+### Lab 8 - Managing a fishery
+
+## Logistic growth equation:
+
+$$
+\frac{dN}{dt} = r N \left(1 - \frac{N}{K}\right) 
+$$\
+
+Solution:
+
+$$
+N(t) = \frac{K}{1 + \left(\frac{K - N_0}{N_0}\right) e^{-rt}}
+$$
+
+-   N is the population size
+
+-   r is the intrinsic growth rate
+
+-   K is the carrying capacity,
+
+"Alternative" equation / solution: $$
+N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t
+$$
+
+#### MSY Maximum sustainable yield:
+
+$$
+MSY = \frac{K}{2}
+$$
+
+-   MSY is an unstable equilibrium, since harvesting slightly more than the maximum sustainable level leads to a cumulative deficit, where each year the stock produces less than is taken. This results in a feedback loop of declining population, eventually causing the collapse of the stock as the gap between harvest and production level widens. Potential overestimation of the stock size can thus have fatal consequences.
+
+-   While the concept of MSY holds for a theoretical environment with no stochasticity, even slightly fluctuating production levels can lead to extinction due to the above mentioned effect of harvesting more than the growth and the following negative feedback until extinction.
+
+### Lab 9 - Populations in space, metacommunity models
+
+#### Levins model:
+
+$$
+\frac{dp}{dt} = c p (1 - p) - e p 
+$$
+
+Equilibrium at:
+
+$$
+\frac{dp}{dt} = 0 
+$$
+
+$$
+p^* = \frac{c-e}{c}
+$$
+
+With:
+
+-   $p$ is the proportion of occupied habitat patches,
+
+-   $c$ is the colonization rate (the rate at which empty patches are colonized),
+
+-   $e$ is the extinction rate (the rate at which occupied patches go extinct),
+
+$$
+\text{If } c \to \infty, \quad p^* \to 1
+$$
+
+#### Hanski model
+
+$$
+\frac{dp}{dt} = c p (1 - p) - e p \left( \frac{A}{A + h} \right)
+$$
+
+Flaws of metapopulation models:
+
+-   Don't account for danger of dispersal =\> include no population size and can't track what happens to individuals
+
+-   Black- and white thinking of patch - matrix relation: The species can only live in the patches and not in the matrix, but in real world there is a smooth gradient...
+
+Solutions =\>
+
+-   Agent/individual based models
+
+-   Partial differential equations
+
+#### Incidence Function by Hanski:
+
+$$
+E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}
+$$ and Mean occupancy $\psi$: $$
+ \psi_t=\frac{\sum_{i=1}^Ny_{i,t}}{N}
+$$
+
+$$
+C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j
+$$
+
+with:
+
+-   $T_E$ = Time to extinction
+-   $C$ = colonization rate
+-   $M_i$ = migrants
+-   $A$ = Area
+-   $\beta$ = intercept
+-   $y$ = presence/absence
+
+#### Diffusion Equation:
+
+$$
+\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}
+$$
+
+Reaction diffusion equation (Fisher): $$
+\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}
+$$ remember: $$
+\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}
+$$
+
+### Lab 10 - Species abundance distributions & Neutral theory
+
+Fisher 1943: log-series distribution:
+
+$$
+n_1, \quad \frac{n_1 x}{2}, \quad \frac{n_1 x^2}{3}, \quad \frac{n_1 x^3}{4}, \quad \dots
+$$
+
+Preston 1948: log-series is sampling artifact ("closed sampling veil"), in reality log-normal distribution:
+
+$$
+f(x; \mu, \sigma) = \frac{1}{x \sigma \sqrt{2 \pi}} \exp \left( -\frac{(\ln x - \mu)^2}{2 \sigma^2} \right), \quad x > 0
+$$
+
+-   $x$ represents species abundance,
+
+-   $\mu$ and $\sigma$ are the mean and standard deviation of the natural logarithm of y
+
+=\> most species rare but not extremely rare, sampling veil leads to wrong conclusion that most species are rare
+
+#### Chao estimator
+
+$$
+S_{total} = S_{observed} + \frac{n_1^2}{2*n_2}
+$$
+
+-   Intuition: when more singletons than doubletons, there should be more species.
+
+-   But: $S \propto t, A$
+
+#### Hubbell: Unified neutral theory of biodiversity
+
+-   All species, all individuals equal =\> recruitment proportional to abundance of species
+
+-   Similar to log normal distribution when including speciation
+
+-   What is quantitative importance of niche assembly or dispersal?
+
+$$
+\Pr\{N_i - 1 | N_i\} = \frac{N_i}{J} \left[ m(1 - P_i) + (1 - m) \frac{J - N_i}{J - 1} \right] 
+$$
+
+$$
+Pr\{N_i | N_i\} = \frac{N_i}{J} \left[ m P_i + (1 - m) \frac{N_i - 1}{J - 1} \right] + \frac{J - N_i}{J} \left[ m(1 - P_i) + (1 - m) \frac{J - N_i - 1}{J - 1} \right]
+$$
+
+$$
+\Pr\{N_i + 1 | N_i\} = \frac{J - N_i}{J} \left[ m P_i + (1 - m) \frac{N_i}{J - 1} \right]
+$$
+
+Without point mutation but with metacommunity:
+
+$$
+Pi = \frac{N_{i, M}}{J_M}
+$$
+
+-   $N_i$ is the abundance of species i in focal community
+
+-   $Ni_M$ is the abundance of species i in the metacommunity
+
+-   $J$ is the focal community size,
+
+-   $J_M$ is the size of the metacommunity
+
+-   $m$ is the migration probability,
+
+-   $P_i$ is the probability of picking species i from the metacommunity.
+
+### Lab 11 - Biodiversity metrics
+
+#### Shannon diversity H:
+
+$$
+H = -\sum_{i=1}^{n} p_i * ln (p_i) \quad
+ENS_{Shannon} = e^H
+$$ (with ENS = effective number of species)
+
+Maximum when all $p_i$ (relative abundances, $p_i = \frac{1}{S}=\frac{N_i}{N_{tot}}$ (where $N_i=\frac{N_{tot}}{S}$) are equal.
+
+#### Shannon symmetry:
+
+$$
+J = \frac{H}{ln(S)}
+$$
+
+#### Simpson diversity:
+
+$$
+D = \sum_{i=1}^S p_i^2 \quad
+ENS = \frac{1}{D}
+$$ "alternative" Simpson's diversity Index: $D=\sum_i(\frac{n_i}{N})^2$
+
+#### Hill diversity profile:
+
+$$
+{}^{q}D = \left( \sum_{i=1}^S p_i^q \right)^{\frac{1}{1 - q}}
+$$
+
+with:
+
+-   $S$ = total number of species
+
+-   $p_i$ = relative abundance of species $i$
+
+-   $q$ = order parameter (if 0 =\> species richness, if 1 =\> shannon, if 2 =\> simpson)
+
+How to assess the conservation status for an entire community (think IUCN report "scandal")?
+
+We can use the $AMA$ or the $GMA$!
+
+#### Arithmetic mean abundance:
+
+$$
+AMA= \frac{\sum_{i=1}^Sa_i}{S}
+$$
+
+-   High sensitivity to dominant species
+
+#### Geometric mean abundance:
+
+$$
+GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]
+$$
+
+-   Low sensitivity to dominant species
+
+### Lab 12 - Optimization of Conservational Planning
+
+#### Relative endemism:
+
+Species richness for species $j$ at site $i$:
+
+$$
+S_i = \sum_{j = 1}^{n} occ(i, j) 
+$$
+
+with:
+
+$$
+\text{occ}(i, j) = 
+\begin{cases} 
+1 & \text{if species } j \text{ is present at site } i, \\
+0 & \text{otherwise}.
+\end{cases}
+$$
 
 Endemism:
-$E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)$
 
-Maximum Coverage Problem:
-In general we want to maximize our return of investment and minimize costs.
-We do this again by $\sum_{i=1}^N_{sites}c_i*x_i <= BUDGET$
+$$
+E_i = \sum_{j = 1}^{n} \frac{1}{R_j} * occ(i, j)
+$$
 
-$MC=Max\sum_jy_j$ ($y_j$ is the target, f.i. species present: yes or no/ 1 or 0)
-where 
-$y_j=\begin{cases}1 & \text{if } y'_j>0 \\ 0 & \text{if } y'_j=0\end{cases}$ 
-and: <br>
+with $R$ = range of species $j$ which is the $n$ of sites where species occurs:
 
-$y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i$
+$$
+\text{R}_j = \sum_{i=1}^{m} \text{occ}(i, j)
+$$
 
-**Lab11- Biodiversity metrics**
-Shannon-Diversity H:
-$H=-\sum_ip_i*log(p_i)$
-with $p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}$ (where $N_i=\frac{N_{tot}}{S}$)
-- also remember that $exp(H)=S$
+#### Minimum set problem/cost minimizing strategy:
 
-Shannon-Weaver/evenness(?):
-$J=\frac{H}{log(S)}$
+Objective function:
 
-Simpson's diversity Index: 
-$D=\sum_i(\frac{n_i}{N})^2$
+$$
+Min\sum_{i=1}^{N_{site}} c_i * x_i \quad \text{subject to constraint:} 
+$$
 
-Arithmetic mean abundance:
-$AMA= \frac{\sum_{i=1}^Sa_i}{S}$
+$$
+\text{for every j:} \sum_{i = 1}^{N_{sites}} occ(i, j) * x(i) \ge 1
+$$
 
-Geometric Mean Abundance:
-$GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]$
+With:
 
-**Lab10-Neutral theory**
-Hubbel equation (abundanced based):
-$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]$
+-   $c_i$ = cost of site $i$
 
-Hubbel equation (with point mutation):
-$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]$ where $P_i=\frac{N_i^n}{J_n}$
+-   $x(i)$= 1 if selected, else 0
 
-**Lab9-FDR (False Discovery Rate)**
-fdr <- c(fdr,p[i] > match(p[i], psort)*alpha/n) #R-Code
+#### Maximum coverage problem:
 
-else **Metapopulation theory**:
-Mean occupancy $\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}$
-with $\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi$ (c=colonization factor; e=estimator)
-so equilibrium is when $\psi=0$ or $\psi=\frac{c-e}{c}$
+Objective function:
 
-Incidence Function by Henski:
-$E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}$
-with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area
+$$
+Max\sum_{j = 1}^{S_i} y_j 
+$$
 
-$C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j$
-with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence
+$y_i$ is same as constraint before (meaning $y_j$ is the target, f.i. species present: yes or no/ 1 or 0) where $$
+y_j=\begin{cases}1 & \text{if } y'_j>0 \\ 0 & \text{if } y'_j=0\end{cases}
+$$ subject to constraint:
 
-Diffusion Equation:
-$\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}$
-Reaction diffusion equation (Fisher):
-$\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}$
-remember $\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}$
+$$
+\sum_{i = 1}^{N_{site}} c_i * x_i \le Budget
+$$
 
-**Lab8 - Fishery**
-Logistical equation:
-$f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h$
-with h=harvesting; K=Capacity
-$N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}$
-Exact solution:
-$N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t$
-```
+**Solutions:**
 
-**Lab13-SAR (Species-Area-Relationships)** $S=c*A^z$
+-   Integer Linear Programming
 
-Calculate relative extinction rates: $E_{rel}=1-(1-\frac{a}{A})^z$
+-   Simulated annealing
 
-The number of species reaches an equilibrium when immigration=extinction. This means: $\frac{dN}{dt}=I(S) - E(S)$ when $\frac{dN}{dt}=0$ this boils down to $I(S)=E(S)$
+-   Genetic algorithms
 
-For multi habitat SAR: $S_i=c_i*\sum_j(h_{ij}*A_j)^z$ with $S=\sum_{i=1}^mS_i$
+-   Greedy algorithms
 
-**Lab12 - Optimization of Conservational Planning** Minimum Cost Problem(?): General principle: $MinC=\sum_{i=1}^N_{sites}c_i*x_i$ where $x_i$ is the vector including the sites that were selected for protection.
+### Lab 13 - SARs (Species-Area-Relationships)
 
-$S_i=\sum_{j=1}^S_{tot}occ(i,j)$
+General formula:
 
-Endemism: $E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)$
+$$
+S = c*A^z \quad
+log(S) = log(c) + z * log(A)
+$$
 
-Maximum Coverage Problem:
+-   $S$ = number of species
 
-In general we want to maximize our return of investment and minimize costs.
+-   $c$ = number of species for unit area \~ rough measure of alpha diversity
 
-We do this again by $\sum_{i=1}^N_{sites}c_i*x_i <= BUDGET$
+-   $z$ = constant, rough measure of beta diversity
 
-$MC=Max\sum_jy_j$ ($y_j$ is the target, f.i. species present: yes or no/ 1 or 0) where $y_j=\begin{cases}1 & \text{if } y'_j>0 \\ 0 & \text{if } y'_j=0\end{cases}$ and:
+Explained by model:
 
-$y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i$
+-   Equilibrium between immigration and extinction
 
-**Lab11- Biodiversity metrics**
+-   immigration decreases with number of species on island, increases with distance to mainland
 
-Shannon-Diversity H: $H=-\sum_ip_i*log(p_i)$
+-   extinction increases with the number of species on island, decreases with area of island
 
-with $p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}$ (where $N_i=\frac{N_{tot}}{S}$)
+General formula:
 
-\- also remember that $exp(H)=S$
+$$
+\frac{dS(t)}{dt} = I(S) - E(S)
+$$
 
-**Shannon-Weaver/evenness(?):** $J=\frac{H}{log(S)}$
+-   $S$ = number of species
 
-Simpson's diversity Index: $D=\sum_i(\frac{n_i}{N})^2$
+-   $E$ = extinction rate
 
-Arithmetic mean abundance: $AMA= \frac{\sum_{i=1}^Sa_i}{S}$
+-   $I$ = immigration rate
 
-Geometric Mean Abundance: $GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]$
+The number of species reaches an equilibrium when immigration=extinction.
 
-**Lab10-Neutral theory**
+This means:
 
-Hubbel equation (abundanced based): $Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]$
+$$
+E(S)=I(S)\\ if\\ \frac{dN}{dt}=0
+$$
 
-Hubbel equation (with point mutation): $Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]$
+Problems of this model:
 
-where $P_i=\frac{N_i^n}{J_n}$
+-   all species assumed to be equal
 
-**Lab9-FDR (False Discovery Rate)**
+-   assumes turnover of species
 
-fdr \<- c(fdr,p\[i\] \> match(p\[i\], psort)\*alpha/n) #R-Code
+-   doesn't consider geological age etc.
 
-else **Metapopulation theory**:
+-   no speciation
 
-Mean occupancy $\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}$
+#### Continental vs. island SAR:
 
-with $\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi$ (c=colonization factor; e=estimator)
+-   continental: slope \~ 0.15, nested parts of the same region, each smaller area is completely inside the next, larger area
+-   island: slope \~ 0.25, separate, non-overlapping and isolated sets of regions, e.g. habitat patches like islands, mountain tops, lakes, caves...
 
-so equilibrium is when $\psi=0$ or $\psi=\frac{c-e}{c}$
+#### Problems with SARs:
 
-**Incidence Function** by Henski:
+-   binary distinction between habitat and not habitat, but in reality a lot of intermediate states
+-   debate whether it only predicts imminent extinctions (probably more likely when using continental SAR) or includes extinction debth (populations that are no longer viable when smaller system approaches new equilibrium)
 
-$E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}$
+#### Relative Extinction estimation from SAR:
 
-with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area
+$$
+\frac{S(A-a)}{S(A)}= E_{rel}= 1-\left( 1-\frac{a}{A} \right)^z
+$$
 
-$C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j$
+#### Multi habitat SAR:
 
-with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence
-
-**Diffusion Equation:**
-
-$\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}$
-
-**Reaction diffusion equation** (Fisher):
-
-$\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}$
-
-remember $\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}$
-
-**Lab8 - Fishery**
-
-Logistical equation:
-
-$f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h$
-
-with h=harvesting; K=Capacity
-
-$N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}$
-
-Exact solution: $N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t$
+$$
+S_i=c_i*\sum_j(h_{ij}*A_j)^z
+$$ with $S=\sum_{i=1}^mS_i$

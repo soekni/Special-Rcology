@@ -213,8 +213,32 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link active" data-scroll-target="#how-to-use">How to use</a>
+  <ul class="collapse">
+  <li><a href="#lab-1---climate-spaces" id="toc-lab-1---climate-spaces" class="nav-link" data-scroll-target="#lab-1---climate-spaces">Lab 1 - Climate spaces</a></li>
+  <li><a href="#lab-2---optimal-foraging" id="toc-lab-2---optimal-foraging" class="nav-link" data-scroll-target="#lab-2---optimal-foraging">Lab 2 - Optimal foraging</a></li>
+  <li><a href="#lab-3---evolutionary-games" id="toc-lab-3---evolutionary-games" class="nav-link" data-scroll-target="#lab-3---evolutionary-games">Lab 3 - Evolutionary games</a></li>
+  <li><a href="#lab-4---random-walk" id="toc-lab-4---random-walk" class="nav-link" data-scroll-target="#lab-4---random-walk">Lab 4 - Random walk</a></li>
+  <li><a href="#lab-5---population-dynamics" id="toc-lab-5---population-dynamics" class="nav-link" data-scroll-target="#lab-5---population-dynamics">Lab 5 - Population dynamics</a></li>
+  <li><a href="#lab-6---population-dynamics-and-stochasticity" id="toc-lab-6---population-dynamics-and-stochasticity" class="nav-link" data-scroll-target="#lab-6---population-dynamics-and-stochasticity">Lab 6 - Population dynamics and stochasticity</a></li>
+  <li><a href="#lab-7---occupancy-model" id="toc-lab-7---occupancy-model" class="nav-link" data-scroll-target="#lab-7---occupancy-model">Lab 7 - Occupancy model</a></li>
+  <li><a href="#lab-8---managing-a-fishery" id="toc-lab-8---managing-a-fishery" class="nav-link" data-scroll-target="#lab-8---managing-a-fishery">Lab 8 - Managing a fishery</a></li>
+  </ul></li>
+  <li><a href="#logistic-growth-equation" id="toc-logistic-growth-equation" class="nav-link" data-scroll-target="#logistic-growth-equation">Logistic growth equation:</a>
+  <ul class="collapse">
+  <li><a href="#lab-9---populations-in-space-metacommunity-models" id="toc-lab-9---populations-in-space-metacommunity-models" class="nav-link" data-scroll-target="#lab-9---populations-in-space-metacommunity-models">Lab 9 - Populations in space, metacommunity models</a></li>
+  <li><a href="#lab-10---species-abundance-distributions-neutral-theory" id="toc-lab-10---species-abundance-distributions-neutral-theory" class="nav-link" data-scroll-target="#lab-10---species-abundance-distributions-neutral-theory">Lab 10 - Species abundance distributions &amp; Neutral theory</a></li>
+  <li><a href="#lab-11---biodiversity-metrics" id="toc-lab-11---biodiversity-metrics" class="nav-link" data-scroll-target="#lab-11---biodiversity-metrics">Lab 11 - Biodiversity metrics</a></li>
+  <li><a href="#lab-12---optimization-of-conservational-planning" id="toc-lab-12---optimization-of-conservational-planning" class="nav-link" data-scroll-target="#lab-12---optimization-of-conservational-planning">Lab 12 - Optimization of Conservational Planning</a></li>
+  <li><a href="#lab-13---sars-species-area-relationships" id="toc-lab-13---sars-species-area-relationships" class="nav-link" data-scroll-target="#lab-13---sars-species-area-relationships">Lab 13 - SARs (Species-Area-Relationships)</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/CheatSheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/CheatSheet.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -238,143 +262,739 @@ window.Quarto = {
 </header>
 
 
-<p>The following equations can be copy+pasted from below:</p>
-<pre class="{tex}"><code>**Lab13-SAR (Species-Area-Relationships)**
-$S=c*A^z$
+<section id="how-to-use" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
+<p>The following equations can be copy+pasted from below (<strong>right click</strong> on equation)!:</p>
+<section id="lab-1---climate-spaces" class="level3">
+<h3 class="anchored" data-anchor-id="lab-1---climate-spaces">Lab 1 - Climate spaces</h3>
+<p>Climate space of an ectotherm</p>
+<p><span class="math display">\[
+f = q\ –h*(b - a)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(q\)</span> = solar radiation (cal/h)</p></li>
+<li><p><span class="math inline">\(h*(b - a)\)</span> = heat loss through convection</p></li>
+<li><p><span class="math inline">\(b\)</span> = body temperature of the animal (ºC)</p></li>
+<li><p><span class="math inline">\(a\)</span> = air temperature (ºC)</p></li>
+<li><p><span class="math inline">\(h\)</span> = convection heat transfer coefficient (cal/h/ ºC)</p></li>
+</ul>
+<p>Equilibrium body temperature at:</p>
+<p><span class="math display">\[
+b^* = \frac{q}{h}+a
+\]</span></p>
+<p>=&gt; if solar radiation = 0, =&gt; body temperature same as air temperature</p>
+<p>Climate space equation:</p>
+<p><span class="math display">\[
+a_{max, min} = b_{max, min} - \frac{q}{h}
+\]</span></p>
+</section>
+<section id="lab-2---optimal-foraging" class="level3">
+<h3 class="anchored" data-anchor-id="lab-2---optimal-foraging">Lab 2 - Optimal foraging</h3>
+<section id="searching-predator" class="level4">
+<h4 class="anchored" data-anchor-id="searching-predator">Searching predator</h4>
+<p>Only feeding on 1 or only feeding on 2: <span class="math display">\[
+\left( \frac{E}{T} \right)_{S_i} = \frac{e_i - ew \cdot \left( \dfrac{1}{a_i} \right) - eh \cdot h_i}{\left( \dfrac{1}{a_i} \right) + h_i} \quad \text{for } i = 1, 2
+\]</span></p>
+<p>Feeding on both: <span class="math display">\[
+\left( \frac{E}{T} \right)_{S_3} = \frac{ \displaystyle \left( \dfrac{ a_1 e_1 + a_2 e_2 }{ a_1 + a_2 } \right) - e_w \cdot \left( \dfrac{1}{ a_1 + a_2 } \right) - e_h \cdot \left( \dfrac{ a_1 h_1 + a_2 h_2 }{ a_1 + a_2 } \right) }{ \displaystyle \left( \dfrac{1}{ a_1 + a_2 } \right) + \left( \dfrac{ a_1 h_1 + a_2 h_2 }{ a_1 + a_2 } \right) }
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(a_i\)</span> be the point abundance per unit of time of prey type i [ind/s]</p></li>
+<li><p><span class="math inline">\(e_i\)</span> be the caloric content of prey type i [J]</p></li>
+<li><p><span class="math inline">\(h_i\)</span> be the time it takes to consume prey type i [s]</p></li>
+<li><p><span class="math inline">\(e_w\)</span> is the energy expended per unit of time by the predator while searching for prey [J/s]</p></li>
+<li><p><span class="math inline">\(e_h\)</span> is the energy expended per unit of time by the predator to ingest prey [J/s]</p></li>
+<li><p>Weighted mean of energy per prey - energy spent while waiting - energy spent while handling</p></li>
+</ul>
+<p>The critical point, where the best strategy switches, can be defined as: <span class="math display">\[
+a_{1_{switch}} = \frac{e_2 + (e_w - e_h) \cdot h_2}{e_1 \cdot h_2 - e_2 \cdot h_1}
+\]</span></p>
+<p>=&gt; critical point only depends on most interesting prey abundance</p>
+<p>Best prey:</p>
+<p><span class="math display">\[
+\frac{e_1}{h_1} &gt; \frac{e_2}{h_2}
+\]</span></p>
+</section>
+<section id="sit-and-wait-predator" class="level4">
+<h4 class="anchored" data-anchor-id="sit-and-wait-predator">Sit and wait predator</h4>
+<p><span class="math display">\[
+t_p = \frac{4}{3} \cdot \frac{r_c}{v} \quad \text{(average time spent pursuing)}
+\]</span></p>
+<p><span class="math display">\[
+t_w = \frac{2}{\pi \cdot r_c^2 \cdot a} \quad \text{(average time spent waiting)}
+\]</span> With:</p>
+<ul>
+<li><p><span class="math inline">\(r_c\)</span> = cutoff radius [m]</p></li>
+<li><p><span class="math inline">\(a\)</span> = prey abundance [#/s*m²]</p></li>
+<li><p><span class="math inline">\(v\)</span> = speed of predator [m/s]</p></li>
+<li><p><span class="math inline">\(e_w\)</span> = energy expended by predator per unit of time waiting [J/s]</p></li>
+<li><p><span class="math inline">\(t_w\)</span> = time spent waiting for prey [s]</p></li>
+<li><p><span class="math inline">\(e_p\)</span> = energy spent pursuing the prey per unit time [J/s]</p></li>
+<li><p><span class="math inline">\(t_p\)</span> = time spent pursuing the prey [s]</p></li>
+<li><p><span class="math inline">\(e_i\)</span> = time per item</p></li>
+</ul>
+<p><span class="math display">\[
+\frac{E}{T} = \frac{e_i - e_w * t_w - e_p * t_p}{t_w + t_p} \quad \text{(energy intake rate)}
+\]</span></p>
+<p>Follows a parapola relationship with optimal value depending on:</p>
+<ul>
+<li><p>prey abundance =&gt; higher =&gt; lower rc</p></li>
+<li><p>energy of prey =&gt; higher =&gt; higher rc</p></li>
+</ul>
+</section>
+</section>
+<section id="lab-3---evolutionary-games" class="level3">
+<h3 class="anchored" data-anchor-id="lab-3---evolutionary-games">Lab 3 - Evolutionary games</h3>
+<section id="nash-equilibrium" class="level4">
+<h4 class="anchored" data-anchor-id="nash-equilibrium">Nash equilibrium:</h4>
+<p><span class="math display">\[
+E(S^*, S^*) \geq E(S_i, S^*)  \quad \text{for any strategy Si}
+\]</span></p>
+<p>With:</p>
+<ul>
+<li><p><span class="math inline">\(E\)</span> = expected payoff</p></li>
+<li><p><span class="math inline">\(S\)</span> = strategy</p></li>
+</ul>
+<p>Condition when is same (invade population when rare):</p>
+<p><span class="math display">\[
+E(S^*, S_i) &gt; E(S_i, S_i)
+\]</span></p>
+<p>ESS or Nash equilibrium has to be best response to itself. No player has an incentive to unilaterally change their strategy</p>
+<p>When does cooperation evolve:</p>
+<ul>
+<li>Kin selection theory by William D. Hamilton</li>
+</ul>
+</section>
+<section id="hawk-dove-game" class="level4">
+<h4 class="anchored" data-anchor-id="hawk-dove-game">Hawk dove game:</h4>
+<p>Payoff matrix:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Hawk</th>
+<th>Dove</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Hawk</strong></td>
+<td><span class="math inline">\(\frac{V - C_{HH}}{2}\)</span></td>
+<td>V</td>
+</tr>
+<tr class="even">
+<td><strong>Dove</strong></td>
+<td>0</td>
+<td><span class="math inline">\(\frac{1}{2}V-C_{DD}\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span class="math inline">\(V\)</span> = value of resource</p></li>
+<li><p><span class="math inline">\(CHH\)</span> = cost of conflict with other hawk</p></li>
+<li><p><span class="math inline">\(CDD\)</span> = cost of sharing the resource</p></li>
+</ul>
+<p>=&gt; no strategy best against itself =&gt; H can invade D population, D can invade H population =&gt; no simple ESS</p>
+<p>Mixed strategies with p = probability of being hawk:</p>
+<p><span class="math display">\[
+   E(\text{Hawk}) = p \cdot \frac{V - C_{HH}}{2} + (1 - p) \cdot V
+\]</span></p>
+<p><span class="math display">\[
+   E(\text{Dove}) = p \cdot 0 + (1 - p) \cdot \frac{V-C_{DD}}{2}
+\]</span></p>
+<p>For mixed strategy ESS:</p>
+<p><span class="math display">\[
+   p \cdot \frac{V - C_{HH}}{2} + (1 - p) \cdot V = (1 - p) \cdot \frac{V - C_{DD}}{2}
+\]</span></p>
+<p><span class="math display">\[
+   p = \frac{V - C_{DD}}{V + C_{HH} - C_{DD}}
+\]</span></p>
+<p>Example with numbers:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Hawk</th>
+<th>Dove</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Hawk</strong></td>
+<td><span class="math inline">\(\frac{1}{2}*50 + \frac{1}{2}*-100 = -25\)</span></td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td><strong>Dove</strong></td>
+<td>0</td>
+<td><span class="math inline">\(\frac{1}{2}*(50-20) = 15\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+E(\text{Hawk}) = p \cdot \frac{50 - 100}{2} + (1 - p) \cdot 50
+\]</span></p>
+<p><span class="math display">\[
+E(\text{Dove}) = (1 - p) \cdot \frac{50 - 20}{2}
+\]</span></p>
+<p><span class="math display">\[
+   p = \frac{35}{60} = \frac{7}{12} \approx 0.583
+\]</span></p>
+</section>
+<section id="war-of-attrition" class="level4">
+<h4 class="anchored" data-anchor-id="war-of-attrition">War of attrition:</h4>
+<p>Continuous game, stochastic solution, waiting times distributed like:</p>
+<p><span class="math display">\[
+f(T^*) = \frac{1}{V} e^{-T/V}
+\]</span></p>
+<p>With:</p>
+<ul>
+<li><p><span class="math inline">\(V\)</span> = value of resource</p></li>
+<li><p><span class="math inline">\(T\)</span> = waiting time each player is willing to invest</p></li>
+<li><p><span class="math inline">\(f(T)\)</span> = probability density function of waiting times</p></li>
+</ul>
+</section>
+</section>
+<section id="lab-4---random-walk" class="level3">
+<h3 class="anchored" data-anchor-id="lab-4---random-walk">Lab 4 - Random walk</h3>
+<section id="distribution-at-x-y-scale" class="level4">
+<h4 class="anchored" data-anchor-id="distribution-at-x-y-scale">Distribution at x, y scale:</h4>
+<p>Diffusion equation: <span class="math display">\[
+\frac{\partial v}{\partial t} = D \frac{\partial^2 v}{\partial x^2}
+\]</span></p>
+<p>Diffusion equation solution - two dimensional Gaussian distribution: <span class="math display">\[
+n(x, y, t) = \frac{n_0}{4 \pi D t} * \exp\left( -\frac{x^2 + y^2}{4 D t} \right)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(t\)</span> = n of time steps</p></li>
+<li><p><span class="math inline">\(D\)</span> = step length</p></li>
+</ul>
+</section>
+<section id="distribution-of-distances" class="level4">
+<h4 class="anchored" data-anchor-id="distribution-of-distances">Distribution of distances:</h4>
+<p>Rayleigh distribution, transformation of x and y values as: <span class="math display">\[
+r = \sqrt{x^2 + y^2}
+\]</span></p>
+<p>=&gt; distribution of distances:</p>
+<p><span class="math display">\[
+n(r|t) = \frac{n_0}{4 \pi D t} \exp\left(-\frac{r^2}{4 D t}\right)
+\]</span></p>
+<p>Distances scales with sqrt(t), is expected value of r with respect to t: <span class="math display">\[
+\bar{r} = \sqrt{\pi * D * t}
+\]</span></p>
+</section>
+</section>
+<section id="lab-5---population-dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="lab-5---population-dynamics">Lab 5 - Population dynamics</h3>
+<p>Derivation of exponential growth formula:</p>
+<p><span class="math display">\[
+N_{t+1} = N_t + B_t - D_t
+\]</span></p>
+<p><span class="math display">\[
+\quad with \quad B_t, D_t \propto N_t
+\]</span></p>
+<p><span class="math display">\[
+B_t = b * N_t \quad and \quad D_t = d * N_t
+\]</span></p>
+<p><span class="math display">\[
+N_{t+1} = (1 + b - d) * N_t = R * N_t
+\]</span></p>
+<p>Discrete time solution (geometric growth): <span class="math display">\[
+N_t = N_0 \cdot R^t
+\]</span></p>
+<p>Continuous time solution (exponential growth):</p>
+<p><span class="math display">\[
+\frac{dN}{dt} = r N \quad solution:
+\]</span></p>
+<p><span class="math display">\[
+N(t) = N_0 \cdot e^{rt}
+\]</span></p>
+<section id="relationship-r-and-r" class="level4">
+<h4 class="anchored" data-anchor-id="relationship-r-and-r">Relationship <span class="math inline">\(r\)</span> and <span class="math inline">\(R\)</span>:</h4>
+<ul>
+<li><p><span class="math inline">\(r\)</span> is the <strong>intrinsic rate of increase</strong> of <strong>continuous-time models</strong></p></li>
+<li><p><span class="math inline">\(R\)</span> is the <strong>finite rate of increase</strong>, representing the growth factor in <strong>discrete-time models</strong></p></li>
+</ul>
+<p><span class="math display">\[
+R = e^r
+\]</span></p>
+<p><span class="math display">\[
+r = \ln(R)
+\]</span></p>
+<ul>
+<li><p>When <span class="math inline">\(r = 0\)</span> , then <span class="math inline">\(R = e^0 = 1\)</span>, which corresponds to no change in population size.</p></li>
+<li><p>When <span class="math inline">\(r &gt; 0\)</span>, <span class="math inline">\(R &gt; 1\)</span>, indicating growth. - When <span class="math inline">\(r &lt; 0\)</span>, <span class="math inline">\(0 &lt; R &lt; 1\)</span>, indicating decline.</p></li>
+</ul>
+<p><span class="math inline">\(R_0\)</span> is basic reproductive rate, indicating the average number of offspring per individual per generation: <span class="math display">\[
+R_0 = R^\tau
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\tau\)</span> = generation time/infectious period</li>
+</ul>
+</section>
+</section>
+<section id="lab-6---population-dynamics-and-stochasticity" class="level3">
+<h3 class="anchored" data-anchor-id="lab-6---population-dynamics-and-stochasticity">Lab 6 - Population dynamics and stochasticity</h3>
+<p><strong>Demographic stochasticity:</strong></p>
+<ul>
+<li>Internal differences of individuals (age, health, genetic traits)</li>
+<li>Population size dependence =&gt; larger impact in small populations</li>
+</ul>
+<p><span class="math display">\[
+SE = \frac{\sigma}{\sqrt{n}}
+\]</span></p>
+<section id="environmental-stochasticity" class="level4">
+<h4 class="anchored" data-anchor-id="environmental-stochasticity">Environmental stochasticity:</h4>
+<ul>
+<li><p>External environmental variations</p></li>
+<li><p>Climate, resources, disasters</p></li>
+<li><p>Affects all individuals similarly, independent of population size</p></li>
+</ul>
+</section>
+<section id="time-to-extinction-foley-model" class="level4">
+<h4 class="anchored" data-anchor-id="time-to-extinction-foley-model">Time to extinction, Foley model:</h4>
+<p><span class="math display">\[
+T_e=\frac{1}{s r}[e^{s \log(k)}(1-e^{-s \log(N_0)} )-s \log(N_0)]
+\]</span></p>
+<p><span class="math display">\[
+with \quad s = \frac{2r_d}{v}
+\]</span></p>
+<p><span class="math display">\[
+and \quad \bar{r}_d \sim Normal(r_d, v)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(r_d\)</span> = exponential growth rate with mean: <span class="math inline">\(\bar{r}=\log(\bar{R})\)</span></p></li>
+<li><p><span class="math inline">\(v\)</span> = variance of growth rate</p></li>
+<li><p><span class="math inline">\(N_0\)</span> = initial population size</p></li>
+<li><p><span class="math inline">\(K\)</span> = carrying capacity of habitat</p>
+<p>Results:</p></li>
+<li><p><span class="math inline">\(T_E\)</span> increase with <span class="math inline">\(N_0\)</span> increase</p></li>
+<li><p><span class="math inline">\(T_E\)</span> increase with <span class="math inline">\(r\)</span> increase</p></li>
+<li><p><span class="math inline">\(T_E\)</span> decrease with <span class="math inline">\(v\)</span> increase</p></li>
+<li><p><span class="math inline">\(T_E\)</span> increase with <span class="math inline">\(K\)</span> increase</p></li>
+</ul>
+</section>
+<section id="central-limit-theorem" class="level4">
+<h4 class="anchored" data-anchor-id="central-limit-theorem">Central limit theorem</h4>
+<p><span class="math display">\[
+\sum_{i = 1}^{n}\frac{x_i}{n} = \bar{x} \sim Normal\left( \mu, \frac{\sigma^2}{n}\right)
+\]</span></p>
+</section>
+</section>
+<section id="lab-7---occupancy-model" class="level3">
+<h3 class="anchored" data-anchor-id="lab-7---occupancy-model">Lab 7 - Occupancy model</h3>
+<section id="maximum-likelihood-vs.-bayesian" class="level4">
+<h4 class="anchored" data-anchor-id="maximum-likelihood-vs.-bayesian">Maximum likelihood vs.&nbsp;bayesian:</h4>
+<p>MLE:</p>
+<p><span class="math display">\[
+\mathcal{L}(data | hypothesis) = \mathcal{L}(x|\theta) \quad MLE
+\]</span> with <span class="math display">\[
+{\theta} = \arg \max_{\theta} \prod_{i=1}^n f(x_i \mid \theta)
+\]</span></p>
+<p><span class="math display">\[
+P(\theta|x) = \frac{P(x|\theta) * P (\theta)}{P(x)} \quad Bayes
+\]</span></p>
+<p><span class="math display">\[
+P(x) = \int P(x|\theta)P(\theta) d\theta \quad or \quad P(x) = P(x|\theta)P(\theta) + P(x|not_\theta) * P(not_\theta)
+\]</span></p>
+<ul>
+<li><p>Priors in bayesian statistics</p></li>
+<li><p>Posterior distribution</p></li>
+</ul>
+</section>
+<section id="bernoulli-binomial-likelihood" class="level4">
+<h4 class="anchored" data-anchor-id="bernoulli-binomial-likelihood">Bernoulli &amp; binomial likelihood:</h4>
+<p><span class="math display">\[
+P(X = x) = p^x (1 - p)^{1 - x}, \quad x \in {0, 1} \quad Bernoulli
+\]</span></p>
+<p><span class="math display">\[
+L(p) = P(X = 00011) = (1 - p) \cdot (1 - p) \cdot (1 - p) \cdot p \cdot p = (1 - p)^3 p^2
+\]</span></p>
+<p><span class="math display">\[
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, 2, \ldots, n \quad Binomial
+\]</span></p>
+<p><span class="math display">\[
+L(p) = P(X = 2) = \binom{5}{2} p^2 (1 - p)^3
+\]</span></p>
+</section>
+<section id="occupancy-model-with-detection-probability" class="level4">
+<h4 class="anchored" data-anchor-id="occupancy-model-with-detection-probability">Occupancy model with detection probability:</h4>
+<p>with:</p>
+<ul>
+<li><p>detection probability <span class="math inline">\(p\)</span></p></li>
+<li><p>occupancy probability <span class="math inline">\(\psi\)</span></p></li>
+</ul>
+<p>Probability of one detection/non detection:</p>
+<p><span class="math display">\[
+P(y = 1) = \psi * p
+\]</span></p>
+<p><span class="math display">\[
+P(y = 0) = \psi * (1-p) + (1-\psi)
+\]</span></p>
+<p>Probability for several detections:</p>
+<p><span class="math display">\[
+L(\psi, p \mid \mathbf{y}) = \prod_{i=1}^n \left[ \psi \cdot \prod_{j=1}^{J_i} p^{y_{ij}} (1 - p)^{1 - y_{ij}} + (1 - \psi) \cdot \mathbb{I}\left( \sum_{j=1}^{J_i} y_{ij} = 0 \right) \right]
+\]</span></p>
+<p>with:</p>
+<ul>
+<li><p><span class="math inline">\(i\)</span> = site</p></li>
+<li><p><span class="math inline">\(n\)</span> total number of sites</p></li>
+<li><p><span class="math inline">\(j\)</span> = day</p></li>
+<li><p><span class="math inline">\(J_i\)</span> = total number of days at site <span class="math inline">\(i\)</span></p></li>
+</ul>
+<p><span class="math display">\[
+\mathbb{I}(A) =
+\begin{cases}
+1, &amp; \text{if } A \text{ is true}, \\
+0, &amp; \text{if } A \text{ is false}.
+\end{cases}\]</span></p>
+</section>
+</section>
+<section id="lab-8---managing-a-fishery" class="level3">
+<h3 class="anchored" data-anchor-id="lab-8---managing-a-fishery">Lab 8 - Managing a fishery</h3>
+</section>
+</section>
+<section id="logistic-growth-equation" class="level2">
+<h2 class="anchored" data-anchor-id="logistic-growth-equation">Logistic growth equation:</h2>
+<p><span class="math display">\[
+\frac{dN}{dt} = r N \left(1 - \frac{N}{K}\right)
+\]</span><br>
+</p>
+<p>Solution:</p>
+<p><span class="math display">\[
+N(t) = \frac{K}{1 + \left(\frac{K - N_0}{N_0}\right) e^{-rt}}
+\]</span></p>
+<ul>
+<li><p>N is the population size</p></li>
+<li><p>r is the intrinsic growth rate</p></li>
+<li><p>K is the carrying capacity,</p></li>
+</ul>
+<p>“Alternative” equation / solution: <span class="math display">\[
+N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t
+\]</span></p>
+<section id="msy-maximum-sustainable-yield" class="level4">
+<h4 class="anchored" data-anchor-id="msy-maximum-sustainable-yield">MSY Maximum sustainable yield:</h4>
+<p><span class="math display">\[
+MSY = \frac{K}{2}
+\]</span></p>
+<ul>
+<li><p>MSY is an unstable equilibrium, since harvesting slightly more than the maximum sustainable level leads to a cumulative deficit, where each year the stock produces less than is taken. This results in a feedback loop of declining population, eventually causing the collapse of the stock as the gap between harvest and production level widens. Potential overestimation of the stock size can thus have fatal consequences.</p></li>
+<li><p>While the concept of MSY holds for a theoretical environment with no stochasticity, even slightly fluctuating production levels can lead to extinction due to the above mentioned effect of harvesting more than the growth and the following negative feedback until extinction.</p></li>
+</ul>
+</section>
+<section id="lab-9---populations-in-space-metacommunity-models" class="level3">
+<h3 class="anchored" data-anchor-id="lab-9---populations-in-space-metacommunity-models">Lab 9 - Populations in space, metacommunity models</h3>
+<section id="levins-model" class="level4">
+<h4 class="anchored" data-anchor-id="levins-model">Levins model:</h4>
+<p><span class="math display">\[
+\frac{dp}{dt} = c p (1 - p) - e p
+\]</span></p>
+<p>Equilibrium at:</p>
+<p><span class="math display">\[
+\frac{dp}{dt} = 0
+\]</span></p>
+<p><span class="math display">\[
+p^* = \frac{c-e}{c}
+\]</span></p>
+<p>With:</p>
+<ul>
+<li><p><span class="math inline">\(p\)</span> is the proportion of occupied habitat patches,</p></li>
+<li><p><span class="math inline">\(c\)</span> is the colonization rate (the rate at which empty patches are colonized),</p></li>
+<li><p><span class="math inline">\(e\)</span> is the extinction rate (the rate at which occupied patches go extinct),</p></li>
+</ul>
+<p><span class="math display">\[
+\text{If } c \to \infty, \quad p^* \to 1
+\]</span></p>
+</section>
+<section id="hanski-model" class="level4">
+<h4 class="anchored" data-anchor-id="hanski-model">Hanski model</h4>
+<p><span class="math display">\[
+\frac{dp}{dt} = c p (1 - p) - e p \left( \frac{A}{A + h} \right)
+\]</span></p>
+<p>Flaws of metapopulation models:</p>
+<ul>
+<li><p>Don’t account for danger of dispersal =&gt; include no population size and can’t track what happens to individuals</p></li>
+<li><p>Black- and white thinking of patch - matrix relation: The species can only live in the patches and not in the matrix, but in real world there is a smooth gradient…</p></li>
+</ul>
+<p>Solutions =&gt;</p>
+<ul>
+<li><p>Agent/individual based models</p></li>
+<li><p>Partial differential equations</p></li>
+</ul>
+</section>
+<section id="incidence-function-by-hanski" class="level4">
+<h4 class="anchored" data-anchor-id="incidence-function-by-hanski">Incidence Function by Hanski:</h4>
+<p><span class="math display">\[
+E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}
+\]</span> and Mean occupancy <span class="math inline">\(\psi\)</span>: <span class="math display">\[
+\psi_t=\frac{\sum_{i=1}^Ny_{i,t}}{N}
+\]</span></p>
+<p><span class="math display">\[
+C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j
+\]</span></p>
+<p>with:</p>
+<ul>
+<li><span class="math inline">\(T_E\)</span> = Time to extinction</li>
+<li><span class="math inline">\(C\)</span> = colonization rate</li>
+<li><span class="math inline">\(M_i\)</span> = migrants</li>
+<li><span class="math inline">\(A\)</span> = Area</li>
+<li><span class="math inline">\(\beta\)</span> = intercept</li>
+<li><span class="math inline">\(y\)</span> = presence/absence</li>
+</ul>
+</section>
+<section id="diffusion-equation" class="level4">
+<h4 class="anchored" data-anchor-id="diffusion-equation">Diffusion Equation:</h4>
+<p><span class="math display">\[
+\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}
+\]</span></p>
+<p>Reaction diffusion equation (Fisher): <span class="math display">\[
+\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}
+\]</span> remember: <span class="math display">\[
+\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}
+\]</span></p>
+</section>
+</section>
+<section id="lab-10---species-abundance-distributions-neutral-theory" class="level3">
+<h3 class="anchored" data-anchor-id="lab-10---species-abundance-distributions-neutral-theory">Lab 10 - Species abundance distributions &amp; Neutral theory</h3>
+<p>Fisher 1943: log-series distribution:</p>
+<p><span class="math display">\[
+n_1, \quad \frac{n_1 x}{2}, \quad \frac{n_1 x^2}{3}, \quad \frac{n_1 x^3}{4}, \quad \dots
+\]</span></p>
+<p>Preston 1948: log-series is sampling artifact (“closed sampling veil”), in reality log-normal distribution:</p>
+<p><span class="math display">\[
+f(x; \mu, \sigma) = \frac{1}{x \sigma \sqrt{2 \pi}} \exp \left( -\frac{(\ln x - \mu)^2}{2 \sigma^2} \right), \quad x &gt; 0
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(x\)</span> represents species abundance,</p></li>
+<li><p><span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> are the mean and standard deviation of the natural logarithm of y</p></li>
+</ul>
+<p>=&gt; most species rare but not extremely rare, sampling veil leads to wrong conclusion that most species are rare</p>
+<section id="chao-estimator" class="level4">
+<h4 class="anchored" data-anchor-id="chao-estimator">Chao estimator</h4>
+<p><span class="math display">\[
+S_{total} = S_{observed} + \frac{n_1^2}{2*n_2}
+\]</span></p>
+<ul>
+<li><p>Intuition: when more singletons than doubletons, there should be more species.</p></li>
+<li><p>But: <span class="math inline">\(S \propto t, A\)</span></p></li>
+</ul>
+</section>
+<section id="hubbell-unified-neutral-theory-of-biodiversity" class="level4">
+<h4 class="anchored" data-anchor-id="hubbell-unified-neutral-theory-of-biodiversity">Hubbell: Unified neutral theory of biodiversity</h4>
+<ul>
+<li><p>All species, all individuals equal =&gt; recruitment proportional to abundance of species</p></li>
+<li><p>Similar to log normal distribution when including speciation</p></li>
+<li><p>What is quantitative importance of niche assembly or dispersal?</p></li>
+</ul>
+<p><span class="math display">\[
+\Pr\{N_i - 1 | N_i\} = \frac{N_i}{J} \left[ m(1 - P_i) + (1 - m) \frac{J - N_i}{J - 1} \right]
+\]</span></p>
+<p><span class="math display">\[
+Pr\{N_i | N_i\} = \frac{N_i}{J} \left[ m P_i + (1 - m) \frac{N_i - 1}{J - 1} \right] + \frac{J - N_i}{J} \left[ m(1 - P_i) + (1 - m) \frac{J - N_i - 1}{J - 1} \right]
+\]</span></p>
+<p><span class="math display">\[
+\Pr\{N_i + 1 | N_i\} = \frac{J - N_i}{J} \left[ m P_i + (1 - m) \frac{N_i}{J - 1} \right]
+\]</span></p>
+<p>Without point mutation but with metacommunity:</p>
+<p><span class="math display">\[
+Pi = \frac{N_{i, M}}{J_M}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(N_i\)</span> is the abundance of species i in focal community</p></li>
+<li><p><span class="math inline">\(Ni_M\)</span> is the abundance of species i in the metacommunity</p></li>
+<li><p><span class="math inline">\(J\)</span> is the focal community size,</p></li>
+<li><p><span class="math inline">\(J_M\)</span> is the size of the metacommunity</p></li>
+<li><p><span class="math inline">\(m\)</span> is the migration probability,</p></li>
+<li><p><span class="math inline">\(P_i\)</span> is the probability of picking species i from the metacommunity.</p></li>
+</ul>
+</section>
+</section>
+<section id="lab-11---biodiversity-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="lab-11---biodiversity-metrics">Lab 11 - Biodiversity metrics</h3>
+<section id="shannon-diversity-h" class="level4">
+<h4 class="anchored" data-anchor-id="shannon-diversity-h">Shannon diversity H:</h4>
+<p><span class="math display">\[
+H = -\sum_{i=1}^{n} p_i * ln (p_i) \quad
+ENS_{Shannon} = e^H
+\]</span> (with ENS = effective number of species)</p>
+<p>Maximum when all <span class="math inline">\(p_i\)</span> (relative abundances, <span class="math inline">\(p_i = \frac{1}{S}=\frac{N_i}{N_{tot}}\)</span> (where <span class="math inline">\(N_i=\frac{N_{tot}}{S}\)</span>) are equal.</p>
+</section>
+<section id="shannon-symmetry" class="level4">
+<h4 class="anchored" data-anchor-id="shannon-symmetry">Shannon symmetry:</h4>
+<p><span class="math display">\[
+J = \frac{H}{ln(S)}
+\]</span></p>
+</section>
+<section id="simpson-diversity" class="level4">
+<h4 class="anchored" data-anchor-id="simpson-diversity">Simpson diversity:</h4>
+<p><span class="math display">\[
+D = \sum_{i=1}^S p_i^2 \quad
+ENS = \frac{1}{D}
+\]</span> “alternative” Simpson’s diversity Index: <span class="math inline">\(D=\sum_i(\frac{n_i}{N})^2\)</span></p>
+</section>
+<section id="hill-diversity-profile" class="level4">
+<h4 class="anchored" data-anchor-id="hill-diversity-profile">Hill diversity profile:</h4>
+<p><span class="math display">\[
+{}^{q}D = \left( \sum_{i=1}^S p_i^q \right)^{\frac{1}{1 - q}}
+\]</span></p>
+<p>with:</p>
+<ul>
+<li><p><span class="math inline">\(S\)</span> = total number of species</p></li>
+<li><p><span class="math inline">\(p_i\)</span> = relative abundance of species <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(q\)</span> = order parameter (if 0 =&gt; species richness, if 1 =&gt; shannon, if 2 =&gt; simpson)</p></li>
+</ul>
+<p>How to assess the conservation status for an entire community (think IUCN report “scandal”)?</p>
+<p>We can use the <span class="math inline">\(AMA\)</span> or the <span class="math inline">\(GMA\)</span>!</p>
+</section>
+<section id="arithmetic-mean-abundance" class="level4">
+<h4 class="anchored" data-anchor-id="arithmetic-mean-abundance">Arithmetic mean abundance:</h4>
+<p><span class="math display">\[
+AMA= \frac{\sum_{i=1}^Sa_i}{S}
+\]</span></p>
+<ul>
+<li>High sensitivity to dominant species</li>
+</ul>
+</section>
+<section id="geometric-mean-abundance" class="level4">
+<h4 class="anchored" data-anchor-id="geometric-mean-abundance">Geometric mean abundance:</h4>
+<p><span class="math display">\[
+GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]
+\]</span></p>
+<ul>
+<li>Low sensitivity to dominant species</li>
+</ul>
+</section>
+</section>
+<section id="lab-12---optimization-of-conservational-planning" class="level3">
+<h3 class="anchored" data-anchor-id="lab-12---optimization-of-conservational-planning">Lab 12 - Optimization of Conservational Planning</h3>
+<section id="relative-endemism" class="level4">
+<h4 class="anchored" data-anchor-id="relative-endemism">Relative endemism:</h4>
+<p>Species richness for species <span class="math inline">\(j\)</span> at site <span class="math inline">\(i\)</span>:</p>
+<p><span class="math display">\[
+S_i = \sum_{j = 1}^{n} occ(i, j)
+\]</span></p>
+<p>with:</p>
+<p><span class="math display">\[
+\text{occ}(i, j) =
+\begin{cases}
+1 &amp; \text{if species } j \text{ is present at site } i, \\
+0 &amp; \text{otherwise}.
+\end{cases}
+\]</span></p>
+<p>Endemism:</p>
+<p><span class="math display">\[
+E_i = \sum_{j = 1}^{n} \frac{1}{R_j} * occ(i, j)
+\]</span></p>
+<p>with <span class="math inline">\(R\)</span> = range of species <span class="math inline">\(j\)</span> which is the <span class="math inline">\(n\)</span> of sites where species occurs:</p>
+<p><span class="math display">\[
+\text{R}_j = \sum_{i=1}^{m} \text{occ}(i, j)
+\]</span></p>
+</section>
+<section id="minimum-set-problemcost-minimizing-strategy" class="level4">
+<h4 class="anchored" data-anchor-id="minimum-set-problemcost-minimizing-strategy">Minimum set problem/cost minimizing strategy:</h4>
+<p>Objective function:</p>
+<p><span class="math display">\[
+Min\sum_{i=1}^{N_{site}} c_i * x_i \quad \text{subject to constraint:}
+\]</span></p>
+<p><span class="math display">\[
+\text{for every j:} \sum_{i = 1}^{N_{sites}} occ(i, j) * x(i) \ge 1
+\]</span></p>
+<p>With:</p>
+<ul>
+<li><p><span class="math inline">\(c_i\)</span> = cost of site <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(x(i)\)</span>= 1 if selected, else 0</p></li>
+</ul>
+</section>
+<section id="maximum-coverage-problem" class="level4">
+<h4 class="anchored" data-anchor-id="maximum-coverage-problem">Maximum coverage problem:</h4>
+<p>Objective function:</p>
+<p><span class="math display">\[
+Max\sum_{j = 1}^{S_i} y_j
+\]</span></p>
+<p><span class="math inline">\(y_i\)</span> is same as constraint before (meaning <span class="math inline">\(y_j\)</span> is the target, f.i. species present: yes or no/ 1 or 0) where <span class="math display">\[
+y_j=\begin{cases}1 &amp; \text{if } y'_j&gt;0 \\ 0 &amp; \text{if } y'_j=0\end{cases}
+\]</span> subject to constraint:</p>
+<p><span class="math display">\[
+\sum_{i = 1}^{N_{site}} c_i * x_i \le Budget
+\]</span></p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><p>Integer Linear Programming</p></li>
+<li><p>Simulated annealing</p></li>
+<li><p>Genetic algorithms</p></li>
+<li><p>Greedy algorithms</p></li>
+</ul>
+</section>
+</section>
+<section id="lab-13---sars-species-area-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="lab-13---sars-species-area-relationships">Lab 13 - SARs (Species-Area-Relationships)</h3>
+<p>General formula:</p>
+<p><span class="math display">\[
+S = c*A^z \quad
+log(S) = log(c) + z * log(A)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(S\)</span> = number of species</p></li>
+<li><p><span class="math inline">\(c\)</span> = number of species for unit area ~ rough measure of alpha diversity</p></li>
+<li><p><span class="math inline">\(z\)</span> = constant, rough measure of beta diversity</p></li>
+</ul>
+<p>Explained by model:</p>
+<ul>
+<li><p>Equilibrium between immigration and extinction</p></li>
+<li><p>immigration decreases with number of species on island, increases with distance to mainland</p></li>
+<li><p>extinction increases with the number of species on island, decreases with area of island</p></li>
+</ul>
+<p>General formula:</p>
+<p><span class="math display">\[
+\frac{dS(t)}{dt} = I(S) - E(S)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(S\)</span> = number of species</p></li>
+<li><p><span class="math inline">\(E\)</span> = extinction rate</p></li>
+<li><p><span class="math inline">\(I\)</span> = immigration rate</p></li>
+</ul>
+<p>The number of species reaches an equilibrium when immigration=extinction.</p>
+<p>This means:</p>
+<p><span class="math display">\[
+E(S)=I(S)\\ if\\ \frac{dN}{dt}=0
+\]</span></p>
+<p>Problems of this model:</p>
+<ul>
+<li><p>all species assumed to be equal</p></li>
+<li><p>assumes turnover of species</p></li>
+<li><p>doesn’t consider geological age etc.</p></li>
+<li><p>no speciation</p></li>
+</ul>
+<section id="continental-vs.-island-sar" class="level4">
+<h4 class="anchored" data-anchor-id="continental-vs.-island-sar">Continental vs.&nbsp;island SAR:</h4>
+<ul>
+<li>continental: slope ~ 0.15, nested parts of the same region, each smaller area is completely inside the next, larger area</li>
+<li>island: slope ~ 0.25, separate, non-overlapping and isolated sets of regions, e.g.&nbsp;habitat patches like islands, mountain tops, lakes, caves…</li>
+</ul>
+</section>
+<section id="problems-with-sars" class="level4">
+<h4 class="anchored" data-anchor-id="problems-with-sars">Problems with SARs:</h4>
+<ul>
+<li>binary distinction between habitat and not habitat, but in reality a lot of intermediate states</li>
+<li>debate whether it only predicts imminent extinctions (probably more likely when using continental SAR) or includes extinction debth (populations that are no longer viable when smaller system approaches new equilibrium)</li>
+</ul>
+</section>
+<section id="relative-extinction-estimation-from-sar" class="level4">
+<h4 class="anchored" data-anchor-id="relative-extinction-estimation-from-sar">Relative Extinction estimation from SAR:</h4>
+<p><span class="math display">\[
+\frac{S(A-a)}{S(A)}= E_{rel}= 1-\left( 1-\frac{a}{A} \right)^z
+\]</span></p>
+</section>
+<section id="multi-habitat-sar" class="level4">
+<h4 class="anchored" data-anchor-id="multi-habitat-sar">Multi habitat SAR:</h4>
+<p><span class="math display">\[
+S_i=c_i*\sum_j(h_{ij}*A_j)^z
+\]</span> with <span class="math inline">\(S=\sum_{i=1}^mS_i\)</span></p>
 
-Calculate relative extinction rates:
-$E_{rel}=1-(1-\frac{a}{A})^z$
 
-The number of species reaches an equilibrium when immigration=extinction.
-This means: 
-$\frac{dN}{dt}=I(S) - E(S)$ when $\frac{dN}{dt}=0$ this boils down to $I(S)=E(S)$
-
-For multi habitat SAR:
-$S_i=c_i*\sum_j(h_{ij}*A_j)^z$
-with $S=\sum_{i=1}^mS_i$
-
-**Lab12 - Optimization of Conservational Planning**
-Minimum Cost Problem(?):
-General principle: $MinC=\sum_{i=1}^N_{sites}c_i*x_i$ where
-$x_i$ is the vector including the sites that were selected for protection.
-
-$S_i=\sum_{j=1}^S_{tot}occ(i,j)$ 
-
-Endemism:
-$E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)$
-
-Maximum Coverage Problem:
-In general we want to maximize our return of investment and minimize costs.
-We do this again by $\sum_{i=1}^N_{sites}c_i*x_i &lt;= BUDGET$
-
-$MC=Max\sum_jy_j$ ($y_j$ is the target, f.i. species present: yes or no/ 1 or 0)
-where 
-$y_j=\begin{cases}1 &amp; \text{if } y'_j&gt;0 \\ 0 &amp; \text{if } y'_j=0\end{cases}$ 
-and: &lt;br&gt;
-
-$y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i$
-
-**Lab11- Biodiversity metrics**
-Shannon-Diversity H:
-$H=-\sum_ip_i*log(p_i)$
-with $p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}$ (where $N_i=\frac{N_{tot}}{S}$)
-- also remember that $exp(H)=S$
-
-Shannon-Weaver/evenness(?):
-$J=\frac{H}{log(S)}$
-
-Simpson's diversity Index: 
-$D=\sum_i(\frac{n_i}{N})^2$
-
-Arithmetic mean abundance:
-$AMA= \frac{\sum_{i=1}^Sa_i}{S}$
-
-Geometric Mean Abundance:
-$GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]$
-
-**Lab10-Neutral theory**
-Hubbel equation (abundanced based):
-$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]$
-
-Hubbel equation (with point mutation):
-$Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]$ where $P_i=\frac{N_i^n}{J_n}$
-
-**Lab9-FDR (False Discovery Rate)**
-fdr &lt;- c(fdr,p[i] &gt; match(p[i], psort)*alpha/n) #R-Code
-
-else **Metapopulation theory**:
-Mean occupancy $\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}$
-with $\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi$ (c=colonization factor; e=estimator)
-so equilibrium is when $\psi=0$ or $\psi=\frac{c-e}{c}$
-
-Incidence Function by Henski:
-$E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}$
-with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area
-
-$C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j$
-with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence
-
-Diffusion Equation:
-$\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}$
-Reaction diffusion equation (Fisher):
-$\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}$
-remember $\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}$
-
-**Lab8 - Fishery**
-Logistical equation:
-$f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h$
-with h=harvesting; K=Capacity
-$N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}$
-Exact solution:
-$N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t$</code></pre>
-<p><strong>Lab13-SAR (Species-Area-Relationships)</strong> <span class="math inline">\(S=c*A^z\)</span></p>
-<p>Calculate relative extinction rates: <span class="math inline">\(E_{rel}=1-(1-\frac{a}{A})^z\)</span></p>
-<p>The number of species reaches an equilibrium when immigration=extinction. This means: <span class="math inline">\(\frac{dN}{dt}=I(S) - E(S)\)</span> when <span class="math inline">\(\frac{dN}{dt}=0\)</span> this boils down to <span class="math inline">\(I(S)=E(S)\)</span></p>
-<p>For multi habitat SAR: <span class="math inline">\(S_i=c_i*\sum_j(h_{ij}*A_j)^z\)</span> with <span class="math inline">\(S=\sum_{i=1}^mS_i\)</span></p>
-<p><strong>Lab12 - Optimization of Conservational Planning</strong> Minimum Cost Problem(?): General principle: <span class="math inline">\(MinC=\sum_{i=1}^N_{sites}c_i*x_i\)</span> where <span class="math inline">\(x_i\)</span> is the vector including the sites that were selected for protection.</p>
-<p><span class="math inline">\(S_i=\sum_{j=1}^S_{tot}occ(i,j)\)</span></p>
-<p>Endemism: <span class="math inline">\(E_i=\sum_{j=1}^S_{tot}\frac{1}{R_j}occ(i,j)\)</span></p>
-<p>Maximum Coverage Problem:</p>
-<p>In general we want to maximize our return of investment and minimize costs.</p>
-<p>We do this again by <span class="math inline">\(\sum_{i=1}^N_{sites}c_i*x_i &lt;= BUDGET\)</span></p>
-<p><span class="math inline">\(MC=Max\sum_jy_j\)</span> (<span class="math inline">\(y_j\)</span> is the target, f.i. species present: yes or no/ 1 or 0) where <span class="math inline">\(y_j=\begin{cases}1 &amp; \text{if } y'_j&gt;0 \\ 0 &amp; \text{if } y'_j=0\end{cases}\)</span> and:</p>
-<p><span class="math inline">\(y'_j=\sum_{i=1}^N_{sites}occ(i,j)*x_i\)</span></p>
-<p><strong>Lab11- Biodiversity metrics</strong></p>
-<p>Shannon-Diversity H: <span class="math inline">\(H=-\sum_ip_i*log(p_i)\)</span></p>
-<p>with <span class="math inline">\(p_i=\frac{1}{S}=\frac{N_i}{N_{tot}}\)</span> (where <span class="math inline">\(N_i=\frac{N_{tot}}{S}\)</span>)</p>
-<p>- also remember that <span class="math inline">\(exp(H)=S\)</span></p>
-<p><strong>Shannon-Weaver/evenness(?):</strong> <span class="math inline">\(J=\frac{H}{log(S)}\)</span></p>
-<p>Simpson’s diversity Index: <span class="math inline">\(D=\sum_i(\frac{n_i}{N})^2\)</span></p>
-<p>Arithmetic mean abundance: <span class="math inline">\(AMA= \frac{\sum_{i=1}^Sa_i}{S}\)</span></p>
-<p>Geometric Mean Abundance: <span class="math inline">\(GMA=exp[\frac{1}{n}\sum_{i=1}^nlog(a_i)]\)</span></p>
-<p><strong>Lab10-Neutral theory</strong></p>
-<p>Hubbel equation (abundanced based): <span class="math inline">\(Pr({N_i+1|N_i})=\frac{J-N_i}{J}[m\frac{N_i^M}{J_M}+(1-m)(\frac{N_i}{J-1})]\)</span></p>
-<p>Hubbel equation (with point mutation): <span class="math inline">\(Pr({N_i+1|N_i})=\frac{J-N_i}{J}[mP_i+(1-m)(\frac{N_i}{J-1})]\)</span></p>
-<p>where <span class="math inline">\(P_i=\frac{N_i^n}{J_n}\)</span></p>
-<p><strong>Lab9-FDR (False Discovery Rate)</strong></p>
-<p>fdr &lt;- c(fdr,p[i] &gt; match(p[i], psort)*alpha/n) #R-Code</p>
-<p>else <strong>Metapopulation theory</strong>:</p>
-<p>Mean occupancy <span class="math inline">\(\psi_t=\frac{\sum_{i=1}^Ny_{i,t}{N}\)</span></p>
-<p>with <span class="math inline">\(\frac{d\psi}{dt}=c\psi(1-\psi)-e\psi\)</span> (c=colonization factor; e=estimator)</p>
-<p>so equilibrium is when <span class="math inline">\(\psi=0\)</span> or <span class="math inline">\(\psi=\frac{c-e}{c}\)</span></p>
-<p><strong>Incidence Function</strong> by Henski:</p>
-<p><span class="math inline">\(E_i=\frac{1}{T_E}=\frac{e}{K_i^x}\approx\frac{e}{A_i^x}\)</span></p>
-<p>with E=Extinction Rate; T_E=Time to extinction; K=Capacity;A=Area</p>
-<p><span class="math inline">\(C_i=\frac{M_i^2}{M_i^2+y^2}M_i=\beta\sum_{j=1?}^Ne^{-\alpha d_{i,j}}y_jA_j\)</span></p>
-<p>with C=colonization rate; M_i=migrants; beta=intercept;y=presence/absence</p>
-<p><strong>Diffusion Equation:</strong></p>
-<p><span class="math inline">\(\frac{\partial N}{\partial t}=\frac{\partial ^2N}{\partial x^2}\)</span></p>
-<p><strong>Reaction diffusion equation</strong> (Fisher):</p>
-<p><span class="math inline">\(\frac{\partial N}{\partial t}=rN+\frac{\partial ^2N}{\partial x^2}\)</span></p>
-<p>remember <span class="math inline">\(\frac{\partial N}{\partial t}=\lim_{\Delta t\to\infty} \frac{N(t+\Delta t)-N(t)}{\Delta t}\)</span></p>
-<p><strong>Lab8 - Fishery</strong></p>
-<p>Logistical equation:</p>
-<p><span class="math inline">\(f(N)=\frac{dN}{dt}=rN(1-\frac{N}{K})-h\)</span></p>
-<p>with h=harvesting; K=Capacity</p>
-<p><span class="math inline">\(N(t)=\frac{K}{1+(\frac{K-N_0}{N_0})e^{rt}}\)</span></p>
-<p>Exact solution: <span class="math inline">\(N(t+\Delta t)=N(t)+\frac{dN}{dt}\Delta t\)</span></p>
-
-
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -969,7 +1589,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/CheatSheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/CheatSheet.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/soekni/Special-Rcology/edit/main/CheatSheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soekni/Special-Rcology/blob/main/CheatSheet.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/soekni/Special-Rcology/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
